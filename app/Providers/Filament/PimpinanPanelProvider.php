@@ -3,7 +3,6 @@
 namespace App\Providers\Filament;
 
 use App\Filament\Resources\CapaClosures\CapaClosureResource;
-use BezhanSalleh\LanguageSwitch\LanguageSwitch;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -41,9 +40,6 @@ class PimpinanPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Pimpinan/Widgets'), for: 'App\Filament\Pimpinan\Widgets')
             ->widgets([
-            ])
-            ->plugins([
-                LanguageSwitch::make(),
             ])
             ->middleware([
                 EncryptCookies::class,
