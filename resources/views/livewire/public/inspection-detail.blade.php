@@ -263,17 +263,20 @@
                                     @endif
                                 </td>
                                 <td class="py-space-md px-space-md text-center">
-                                    @if($result->status === 'compliant')
+                                    @php
+                                        $resStatus = $result->status?->value ?? (is_string($result->status) ? $result->status : '');
+                                    @endphp
+                                    @if($resStatus === 'compliant' || $result->status === \App\Enums\ComplianceStatus::Compliant)
                                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
                                             <span class="w-2 h-2 rounded-full bg-primary-container"></span> MS
                                         </span>
-                                    @elseif($result->status === 'non_compliant')
+                                    @elseif($resStatus === 'non_compliant' || $result->status === \App\Enums\ComplianceStatus::NonCompliant)
                                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
                                             <span class="w-2 h-2 rounded-full bg-error"></span> TMS
                                         </span>
                                     @else
                                         <span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
-                                            {{ ucfirst($result->status->value ?? (string)($result->status ?? 'Proses')) }}
+                                            {{ $result->status instanceof \App\Enums\ComplianceStatus ? $result->status->getLabel() : ucfirst($resStatus ?: 'Proses') }}
                                         </span>
                                     @endif
                                 </td>
@@ -334,7 +337,7 @@
                         <div class="flex flex-wrap items-center gap-space-xs mb-space-xs">
                             <span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-secondary-container/40 text-secondary font-label-sm text-label-sm">
                                 <span class="material-symbols-outlined text-[14px]">factory</span>
-                                Sarana {{ ucfirst($inspection->facility?->facility_type->value ?? (string)($inspection->facility?->facility_type ?? 'Produksi')) }}
+                                Sarana {{ $inspection->facility?->facility_type instanceof \App\Enums\FacilityType ? $inspection->facility->facility_type->getLabel() : ucfirst($inspection->facility?->facility_type?->value ?? (is_string($inspection->facility?->facility_type) ? $inspection->facility->facility_type : 'Produksi')) }}
                             </span>
                             <span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
                                 <span class="material-symbols-outlined text-[14px]">pin_drop</span>
@@ -354,7 +357,7 @@
                         <div>
                             <span class="font-label-sm text-label-sm text-on-surface-variant block">Hasil Inspeksi:</span>
                             <span class="font-headline-md text-headline-md text-secondary font-bold">Grade {{ $inspection->grade ?? 'B' }}</span>
-                            <span class="block font-label-sm text-label-sm text-primary font-semibold">Status: {{ ucfirst($inspection->status->value ?? (string)$inspection->status) }}</span>
+                            <span class="block font-label-sm text-label-sm text-primary font-semibold">Status: {{ $inspection->status instanceof \App\Enums\InspectionStatus ? $inspection->status->getLabel() : ucfirst($inspection->status?->value ?? (is_string($inspection->status) ? $inspection->status : '')) }}</span>
                         </div>
                     </div>
                 </div>
@@ -404,18 +407,21 @@
                                     <td class="py-space-md px-space-md text-on-surface-variant font-bold">{{ $idx + 1 }}</td>
                                     <td class="py-space-md px-space-md max-w-sm">
                                         <div class="font-medium text-on-surface">{{ $finding->description }}</div>
-                                        <span class="text-[11px] text-on-surface-variant uppercase font-semibold">Standar: {{ strtoupper($finding->standard->value ?? (string)$finding->standard) }}</span>
+                                        <span class="text-[11px] text-on-surface-variant uppercase font-semibold">Standar: {{ $finding->standard instanceof \App\Enums\InspectionStandard ? $finding->standard->getLabel() : strtoupper($finding->standard?->value ?? (is_string($finding->standard) ? $finding->standard : '')) }}</span>
                                     </td>
                                     <td class="py-space-md px-space-md text-on-surface-variant max-w-sm">{{ $finding->recommendation }}</td>
                                     <td class="py-space-md px-space-md text-on-surface-variant">{{ $finding->due_date?->translatedFormat('d M Y') ?? '—' }}</td>
                                     <td class="py-space-md px-space-md text-center">
-                                        @if($finding->status === 'closed')
+                                        @php
+                                            $findStatusVal = $finding->status?->value ?? (is_string($finding->status) ? $finding->status : '');
+                                        @endphp
+                                        @if($findStatusVal === 'closed' || $finding->status === \App\Enums\FindingStatus::Closed)
                                             <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
                                                 <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Closed
                                             </span>
                                         @else
                                             <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-error"></span> {{ ucfirst($finding->status->value ?? (string)$finding->status) }}
+                                                <span class="w-1.5 h-1.5 rounded-full bg-error"></span> {{ $finding->status instanceof \App\Enums\FindingStatus ? $finding->status->getLabel() : ucfirst($findStatusVal ?: 'Open') }}
                                             </span>
                                         @endif
                                     </td>

@@ -210,17 +210,20 @@
                         <td class="py-space-md px-space-md text-on-surface-variant">Penerapan CPPOB/CPerPOB</td>
                         <td class="py-space-md px-space-md text-on-surface-variant">{{ $item->inspection_date?->translatedFormat('d M Y') ?? '—' }}</td>
                         <td class="py-space-md px-space-md">
-                            @if($item->status === 'completed')
+                            @php
+                                $statusValue = $item->status?->value ?? (is_string($item->status) ? $item->status : '');
+                            @endphp
+                            @if($statusValue === 'completed' || $item->status === \App\Enums\InspectionStatus::Completed)
                                 <span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
                                     <span class="w-2 h-2 rounded-full bg-primary-container"></span> Sesuai Standar
                                 </span>
-                            @elseif(in_array($item->status, ['awaiting_capa','capa_review']))
+                            @elseif(in_array($statusValue, ['awaiting_capa','capa_review'], true) || in_array($item->status, [\App\Enums\InspectionStatus::AwaitingCapa, \App\Enums\InspectionStatus::CapaReview], true))
                                 <span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
                                     <span class="w-2 h-2 rounded-full bg-secondary"></span> Dalam Pembinaan
                                 </span>
                             @else
                                 <span class="inline-flex items-center px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
-                                    {{ ucwords(str_replace('_',' ',$item->status)) }}
+                                    {{ $item->status instanceof \App\Enums\InspectionStatus ? $item->status->getLabel() : ucwords(str_replace('_',' ', $statusValue)) }}
                                 </span>
                             @endif
                         </td>
