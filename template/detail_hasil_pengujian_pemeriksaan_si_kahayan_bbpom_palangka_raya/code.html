@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error-container":"#93000a","surface-dim":"#cbdbf5","surface-container":"#e5eeff","surface-tint":"#106b4f","on-primary-fixed-variant":"#00513a","on-surface":"#0b1c30","surface-container-low":"#eff4ff","inverse-primary":"#86d6b4","on-surface-variant":"#3f4944","tertiary-fixed":"#ffddb4","outline":"#6f7a73","surface-container-lowest":"#ffffff","tertiary":"#623f00","inverse-on-surface":"#eaf1ff","tertiary-fixed-dim":"#ffb955","primary-fixed":"#a1f3cf","outline-variant":"#bec9c2","on-error":"#ffffff","on-secondary":"#ffffff","inverse-surface":"#213145","on-secondary-fixed":"#002020","primary-fixed-dim":"#86d6b4","tertiary-container":"#825400","secondary-container":"#8ff3f2","surface":"#f8f9ff","on-secondary-fixed-variant":"#004f50","surface-bright":"#f8f9ff","surface-container-high":"#dce9ff","secondary-fixed":"#8ff3f2","background":"#f8f9ff","on-background":"#0b1c30","primary":"#00513a","on-tertiary-fixed-variant":"#633f00","on-tertiary-container":"#ffcf92","on-primary":"#ffffff","on-tertiary-fixed":"#291800","on-primary-container":"#97e8c5","surface-container-highest":"#d3e4fe","surface-variant":"#d3e4fe","on-primary-fixed":"#002115","error-container":"#ffdad6","on-tertiary":"#ffffff","error":"#ba1a1a","primary-container":"#0f6b4f","secondary-fixed-dim":"#72d6d6","secondary":"#006a6a","on-secondary-container":"#007070"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","margin-mobile":"1rem","space-xl":"2.5rem","space-sm":"0.5rem","margin":"2rem","gutter":"1.5rem","space-md":"1rem","space-lg":"1.5rem","gutter-mobile":"1rem"},fontFamily:{"headline-md":["Plus Jakarta Sans"],"body-sm":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-xl":["Plus Jakarta Sans"],"body-lg":["Inter"],"title-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"]},fontSize:{"headline-md":["1.25rem",{lineHeight:"1.75rem",fontWeight:"600"}],"body-sm":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"label-md":["0.875rem",{lineHeight:"1.25rem",fontWeight:"600"}],"label-sm":["0.75rem",{lineHeight:"1rem",fontWeight:"600"}],"display-lg-mobile":["2.25rem",{lineHeight:"2.75rem",fontWeight:"700"}],"body-md":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}],"headline-xl":["2rem",{lineHeight:"2.5rem",fontWeight:"700"}],"body-lg":["1.125rem",{lineHeight:"1.75rem",fontWeight:"400"}],"title-sm":["1rem",{lineHeight:"1.5rem",fontWeight:"600"}],"headline-lg":["1.5rem",{lineHeight:"2rem",fontWeight:"600"}],"display-lg":["3rem",{lineHeight:"3.5rem",fontWeight:"700"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,23,42,0.05)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><img alt="Logo Si Kahayan BBPOM Palangka Raya" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X-tgFceBv1BKf8EqX4jgo53yBnC2TXSLVoXb-J9bKm9B-0NSUosF_qhXmQrCPWTSDBOXe6DVp33M-CjU-MNPzFBtdiEGQWpL0tO2mFzUJXAqA3iXAXQ3Dywdcj8_4iiuYj3Y4DsBll-K6FmN1SxtPHlajq9HBYPazCZY2QZWtwWlU4AgU36Jcwg1A7_Gs1KyBOXXvAUUHbfna0YYfkiVpQDg_xMPKGL6wx4MKj_d3ogu5ZAJ-gH1QEL-Y"/><div class="flex flex-col"><span class="font-title-sm text-title-sm text-primary tracking-tight">Si Kahayan</span><span class="font-label-sm text-label-sm text-on-surface-variant">Balai Besar POM di Palangka Raya</span></div></div><nav class="hidden xl:flex items-center gap-space-xs p-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="beranda" href="#">Beranda</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="hasil-pengawasan" href="#">Hasil Pengawasan</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="cari-produk-dan-sarana" href="#">Cari Produk &amp; Sarana</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="validasi-bap" href="#">Validasi BAP</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="panduan" href="#">Panduan</a></nav><div class="flex items-center gap-space-md"><a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary-container hover:bg-primary text-on-primary transition-colors font-label-md text-label-md shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]" data-path="login" href="#"><span class="material-symbols-outlined text-[18px]">lock</span><span>Masuk Pelaku Usaha</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- Top Navigation & Breadcrumbs Bar -->
+<section class="w-full bg-surface-container-lowest shadow-sm">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin py-space-md">
+<!-- Breadcrumb and Quick Back -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-md">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm flex-wrap">
+<a class="hover:text-primary transition-colors flex items-center gap-1" data-path="beranda" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>Beranda</span>
+</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" data-path="cari-produk-dan-sarana" href="#">
+            Cari Produk &amp; Sarana
+          </a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-label-md text-label-md">Detail Hasil Pengujian</span>
+</nav>
+<a class="inline-flex items-center gap-space-xs text-secondary hover:text-primary font-label-md text-label-md transition-colors self-start md:self-auto group" data-path="cari-produk-dan-sarana" href="#">
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:-translate-x-1">arrow_back</span>
+<span>Kembali ke Pencarian</span>
+</a>
+</div>
+<!-- Segmented Tab Switcher + Action Buttons Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pt-space-xs border-t-0">
+<!-- Interactive Segmented Switcher -->
+<div class="inline-flex p-1 bg-surface-container rounded-xl shadow-inner max-w-fit">
+<button class="tab-button inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-primary shadow-sm" id="tab-lab" onclick="switchDetailTab('lab')">
+<span class="material-symbols-outlined text-[18px]">chips</span>
+<span>Detail Hasil Pengujian Sampel Pangan</span>
+</button>
+<button class="tab-button inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface" id="tab-sarana" onclick="switchDetailTab('sarana')">
+<span class="material-symbols-outlined text-[18px]">store</span>
+<span>Pratinjau Detail Pemeriksaan Sarana</span>
+</button>
+</div>
+<!-- Download & Share Actions -->
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors shadow-sm" onclick="window.print()">
+<span class="material-symbols-outlined text-[18px] text-secondary">picture_as_pdf</span>
+<span>Unduh Salinan Publik (PDF)</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-colors shadow-sm" onclick="navigator.clipboard?.writeText(window.location.href); alert('Tautan laporan publik berhasil disalin.');">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span>Bagikan Laporan</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Dynamic Detail Content Slot -->
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin py-space-lg w-full flex flex-col gap-space-xl">
+<!-- VIEW 1: Lab Test Results (Active by Default) -->
+<div class="flex flex-col gap-space-lg transition-opacity duration-200" id="content-lab-view">
+<!-- Primary Highlight Dossier Card -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl shadow-md p-space-md lg:p-space-lg">
+<!-- Subtle Central Kalimantan River Wave Accent -->
+<div class="absolute -right-16 -top-20 w-80 h-80 rounded-full bg-primary/5 pointer-events-none blur-2xl"></div>
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-lg relative z-10">
+<div class="space-y-space-sm flex-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">set_meal</span>
+                Ikan &amp; Olahan Perikanan (Komoditas Unggulan Kalteng)
+              </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">tag</span>
+                No. Uji: LP-PLK-2609-081
+              </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span>
+                Kota Palangka Raya
+              </span>
+</div>
+<div class="pt-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Kahayan Makmur</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mt-0.5">
+                Ikan Salai Patin Asap "Kahayan Makmur" 250g
+              </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-3xl leading-relaxed">
+                Hasil pengujian laboratorium terstandarisasi pengawasan peredaran pangan di Kalimantan Tengah. Meliputi analisis kualitatif bahan kimia berbahaya terlarang dan pengujian kuantitatif cemaran mikrobiologi serta kadar air baku mutu SNI.
+              </p>
+</div>
+</div>
+<!-- Big Status Pill Component -->
+<div class="flex flex-col items-start lg:items-end justify-center shrink-0">
+<div class="flex items-center gap-space-sm px-space-md py-space-sm rounded-full bg-[#DCFCE7] shadow-sm">
+<div class="w-3 h-3 rounded-full bg-primary animate-pulse"></div>
+<span class="font-headline-md text-headline-md text-[#14532D] tracking-tight">MEMENUHI SYARAT (MS)</span>
+<span class="material-symbols-outlined text-[#14532D] text-[24px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-space-xs text-left lg:text-right">
+              Standar SNI &amp; Regulasi Keamanan Pangan BPOM RI
+            </span>
+</div>
+</div>
+<!-- Sampling Metadata Grid (4 Columns) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mt-space-lg pt-space-md bg-surface-container-low/60 rounded-xl p-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Tanggal Sampling</span>
+<span class="font-title-sm text-title-sm text-on-surface">12 September 2026</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Pukul 09.30 WIB</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Tempat Pengambilan Sampel</span>
+<span class="font-title-sm text-title-sm text-on-surface">Pasar Besar Palangka Raya</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Kios Ikan Basah Blok B-14</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[20px]">science</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Periode Uji Laboratorium</span>
+<span class="font-title-sm text-title-sm text-on-surface">14 - 18 September 2026</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Durasi: 4 Hari Kerja</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Metode &amp; Akreditasi</span>
+<span class="font-title-sm text-title-sm text-on-surface">ISO/IEC 17025</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Akreditasi KAN LP-018-IDN</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Horizontal Sample Lifecycle Workflow -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md lg:p-space-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">timeline</span>
+<h2 class="font-title-sm text-title-sm text-on-surface">Alur Pengawasan &amp; Pengujian Sampel Pangan Terverifikasi</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-2 py-0.5 rounded-full">Siklus Selesai</span>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<!-- Step 1 -->
+<div class="flex flex-col bg-surface-container-low/40 p-space-sm rounded-lg relative">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Langkah 1</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface">Sampling Terpilih</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">12 Sep 2026</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">BA: BA-09/2026/PLK</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col bg-surface-container-low/40 p-space-sm rounded-lg relative">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-[16px]">chips</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Langkah 2</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface">Uji Kimia &amp; Mikrobiologi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">14 - 17 Sep 2026</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Lab Pengujian BBPOM</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col bg-surface-container-low/40 p-space-sm rounded-lg relative">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-[16px]">fact_check</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Langkah 3</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface">Validasi &amp; Verifikasi Mutu</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">18 Sep 2026</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Disetujui Manajer Teknis</span>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col bg-surface-container-low/40 p-space-sm rounded-lg relative">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-[16px]">public</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">Langkah 4</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface">Publikasi Terbuka</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">19 Sep 2026</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Portal Resmi Si Kahayan</span>
+</div>
+</div>
+</div>
+<!-- Comprehensive Lab Results Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md overflow-hidden">
+<div class="p-space-md lg:p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-sm bg-surface-container-lowest">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Hasil per Parameter Uji Laboratorium</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Standar Keputusan Kepala BPOM RI No. 13 Tahun 2019 &amp; Standar Nasional Indonesia (SNI) Ikan Asap.
+            </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-[#DCFCE7] text-[#14532D]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              7 Parameter Memenuhi Syarat
+            </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant">
+              0 Parameter Berisiko
+            </span>
+</div>
+</div>
+<!-- Desktop Responsive Table View -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface font-label-md text-label-md">
+<th class="py-space-sm px-space-md">Parameter Uji</th>
+<th class="py-space-sm px-space-md">Satuan / Metode</th>
+<th class="py-space-sm px-space-md">Nilai Batas Maksimum (BPOM)</th>
+<th class="py-space-sm px-space-md">Hasil Uji Lab</th>
+<th class="py-space-sm px-space-md text-center">Status Kesimpulan</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<!-- Parameter 1: Formalin -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md font-title-sm text-title-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">water_drop</span>
+<span>Formalin (Uji Kualitatif)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block pl-6">Bahan Kimia Pengawet Berbahaya</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Kualitatif / Spektrofotometri</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-on-surface">Negatif</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-primary font-bold">Negatif</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Bebas Formalin</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DCFCE7] text-[#14532D] font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    MS
+                  </span>
+</td>
+</tr>
+<!-- Parameter 2: Rhodamin B -->
+<tr class="bg-surface-container-low/20 hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md font-title-sm text-title-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">colorize</span>
+<span>Rhodamin B</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block pl-6">Pewarna Sintetik Merah Tekstil</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Kromatografi Lapis Tipis (KLT)</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-on-surface">Negatif</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-primary font-bold">Negatif</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Tidak Terdeteksi</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DCFCE7] text-[#14532D] font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    MS
+                  </span>
+</td>
+</tr>
+<!-- Parameter 3: Metanil Yellow -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md font-title-sm text-title-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">format_color_fill</span>
+<span>Metanil Yellow</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block pl-6">Pewarna Sintetik Kuning Industri</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Kromatografi Lapis Tipis (KLT)</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-on-surface">Negatif</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-primary font-bold">Negatif</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Tidak Terdeteksi</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DCFCE7] text-[#14532D] font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    MS
+                  </span>
+</td>
+</tr>
+<!-- Parameter 4: ALT Cemaran Mikroba -->
+<tr class="bg-surface-container-low/20 hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md font-title-sm text-title-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">coronavirus</span>
+<span>Cemaran Mikroba - ALT (Angka Lempeng Total)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block pl-6">Indikator Higiene &amp; Sanitasi Pengolahan</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Koloni / gram (PCA 30°C)</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-on-surface">Maks. 5 x 10<sup>5</sup> koloni/g</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-primary font-bold">1.2 x 10<sup>3</sup> koloni/g</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Jauh Di Bawah Ambang Batas</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DCFCE7] text-[#14532D] font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    MS
+                  </span>
+</td>
+</tr>
+<!-- Parameter 5: Escherichia coli -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md font-title-sm text-title-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">pest_control</span>
+<span>Escherichia coli</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block pl-6">Cemaran Fekal &amp; Higiene Air Produksi</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant">APM / gram (Metode MPN)</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-on-surface">&lt; 3 APM/g</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-primary font-bold">&lt; 3 APM/g</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Steril Cemaran Fekal</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DCFCE7] text-[#14532D] font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    MS
+                  </span>
+</td>
+</tr>
+<!-- Parameter 6: Salmonella sp. -->
+<tr class="bg-surface-container-low/20 hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md font-title-sm text-title-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">bug_report</span>
+<span>Salmonella sp.</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block pl-6">Patogen Penyebab Infeksi Pangan</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant">Kualitatif per 25 gram</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-on-surface">Negatif / 25g</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-primary font-bold">Negatif / 25g</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Aman Patogen</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DCFCE7] text-[#14532D] font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    MS
+                  </span>
+</td>
+</tr>
+<!-- Parameter 7: Kadar Air -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md font-title-sm text-title-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">humidity_mid</span>
+<span>Kadar Air</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block pl-6">Standar Mutu Ketahanan Ikan Asap</span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant">% Bobot / Bobot (Metode Gravimetri)</td>
+<td class="py-space-md px-space-md font-label-md text-label-md text-on-surface">Maks. 22%</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-md text-label-md text-primary font-bold">16.4%</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Tingkat Pengasapan Optimal</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DCFCE7] text-[#14532D] font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    MS
+                  </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Lab Analyst Conclusion Note Box -->
+<div class="p-space-md bg-surface-container-low flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-primary uppercase">Catatan Evaluasi Mutu Analis Laboratorium:</span>
+<p class="font-body-md text-body-md text-on-surface mt-0.5 leading-relaxed">
+              Seluruh 7 parameter uji kimia bahan berbahaya dan cemaran mikrobiologi <strong>memenuhi kriteria keamanan pangan olahan ikan asap</strong> sesuai ketentuan SNI 2725:2018 dan Peraturan BPOM. Produk ini dinyatakan <em>layak dan aman dikonsumsi masyarakat</em> di wilayah Kalimantan Tengah.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- VIEW 2: Facility Inspection Variant Card (Toggled via JS/Tabs) -->
+<div class="flex flex-col gap-space-lg" id="content-sarana-view">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md lg:p-space-lg relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div>
+<div class="flex flex-wrap items-center gap-space-xs mb-space-xs">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-secondary-container/40 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">factory</span>
+                Sarana Produksi (CPPOB)
+              </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">pin_drop</span>
+                Kec. Pahandut, Kota Palangka Raya
+              </span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">UD. Berkah Mandiri Patin Kahayan</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Produsen olahan pangan komoditas ikan air tawar khas Sungai Kahayan.</p>
+</div>
+<div class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[32px]">workspace_premium</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Hasil Inspeksi Terakhir:</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold">Grade A (Sangat Baik)</span>
+<span class="block font-label-sm text-label-sm text-primary font-semibold">Skor Kepatuhan CPPOB: 96.4%</span>
+</div>
+</div>
+</div>
+<!-- Facility Metadata & CAPA Status -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-lg pt-space-md bg-surface-container-low/40 rounded-xl p-space-md">
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Tanggal Pemeriksaan Terakhir</span>
+<span class="font-title-sm text-title-sm text-on-surface">22 Agustus 2026</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Tim Pengawas Seksi Pemeriksaan</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Tindak Lanjut Perbaikan (CAPA)</span>
+<span class="inline-flex items-center gap-1 font-title-sm text-title-sm text-primary">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+              100% Closed (Disahkan)
+            </span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Status Selesai pada 05 Sep 2026</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Izin Penerapan CPPOB</span>
+<span class="font-title-sm text-title-sm text-on-surface">Kategori C-09 (Olahan Ikan)</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Masa Berlaku s.d. Nov 2028</span>
+</div>
+</div>
+<!-- Privacy & Whitelist Compliance Notice -->
+<div class="mt-space-md p-space-sm bg-surface-container-low rounded-lg flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-outline">privacy_tip</span>
+<span class="font-label-sm text-label-sm">
+<strong>Keterbukaan Berkeadilan:</strong> Sesuai UU No. 14/2008 (KIP) &amp; UU PDP, alamat domisili presisi, NIB, NPWP badan usaha, dan dokumentasi foto fasilitas internal tidak dipublikasikan ke portal publik guna perlindungan data strategis.
+          </span>
+</div>
+</div>
+</div>
+<!-- Side-by-Side Reference & Context Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- TMS Comparison / Public Alert Reference Box -->
+<div class="lg:col-span-8 bg-[#FFF1F2] rounded-xl shadow-sm p-space-md lg:p-space-lg flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-[#FEE2E2] text-error flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">warning</span>
+</div>
+<div class="space-y-space-xs flex-1">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-[#FEE2E2] text-[#7F1D1D] font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                Pembanding Regulasi
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Kasus Tidak Memenuhi Syarat (TMS)</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-[#7F1D1D] font-bold">
+              Informasi Edukasi: Contoh Temuan Sampel Berbahaya (TMS) di Pasaran
+            </h3>
+<p class="font-body-sm text-body-sm text-[#7F1D1D] leading-relaxed">
+              Sebagai perbandingan transparansi publik, BBPOM di Palangka Raya memberikan tindakan tegas bila ditemukan produk pangan tidak memenuhi syarat. Contoh temuan pada <em>Sampel Mie Basah Pasar Tradisional (No. BAP-KPS-2026-0419)</em>:
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-lowest/80 p-space-sm rounded-lg shadow-inner">
+<span class="font-label-sm text-label-sm text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">dangerous</span>
+                  Hasil Temuan Laboratorium:
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface block mt-1 font-semibold">
+                  Positif Bahan Berbahaya Formalin 0.8 ppm
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Melanggar Permenkes No. 033/2012</span>
+</div>
+<div class="bg-surface-container-lowest/80 p-space-sm rounded-lg shadow-inner">
+<span class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+                  Tindakan &amp; Intervensi BBPOM:
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface block mt-1">
+                  Pemberian Surat Peringatan Keras, Penarikan Produk dari Peredaran, dan Pendampingan Uji Ulang Sarana.
+                </span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between font-label-sm text-label-sm text-[#7F1D1D]/80">
+<span>Partisipasi warga: Laporkan produk mencurigakan melalui Halo BPOM 1500533</span>
+<a class="text-error font-bold hover:underline flex items-center gap-0.5" data-path="panduan" href="#">
+<span>Pelajari Kriteria TMS</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- QR Code & Digital Verification Card -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">qr_code_scanner</span>
+<h3 class="font-title-sm text-title-sm text-on-surface">Validasi Otentisitas BAP</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+            Pindai kode QR berikut menggunakan kamera ponsel atau aplikasi BPOM Mobile untuk memverifikasi keaslian lembar pengujian digital ini langsung ke database server.
+          </p>
+<!-- Mock QR Element with Visual Framing -->
+<div class="flex items-center justify-center p-space-md bg-surface-container-low rounded-xl">
+<div class="relative bg-surface-container-lowest p-3 rounded-lg shadow-sm flex flex-col items-center">
+<!-- Inline Decorative SVG QR Pattern -->
+<svg class="w-32 h-32 text-on-surface" fill="currentColor" viewbox="0 0 100 100">
+<!-- Position Detection Patterns (Corners) -->
+<rect fill="#00513a" height="25" rx="3" width="25" x="5" y="5"></rect>
+<rect fill="#ffffff" height="17" rx="1" width="17" x="9" y="9"></rect>
+<rect fill="#00513a" height="9" width="9" x="13" y="13"></rect>
+<rect fill="#00513a" height="25" rx="3" width="25" x="70" y="5"></rect>
+<rect fill="#ffffff" height="17" rx="1" width="17" x="74" y="9"></rect>
+<rect fill="#00513a" height="9" width="9" x="78" y="13"></rect>
+<rect fill="#00513a" height="25" rx="3" width="25" x="5" y="70"></rect>
+<rect fill="#ffffff" height="17" rx="1" width="17" x="9" y="74"></rect>
+<rect fill="#00513a" height="9" width="9" x="13" y="78"></rect>
+<!-- Data Matrix Elements -->
+<rect height="6" width="6" x="35" y="10"></rect>
+<rect height="6" width="6" x="45" y="10"></rect>
+<rect height="6" width="6" x="55" y="10"></rect>
+<rect height="6" width="6" x="35" y="20"></rect>
+<rect height="6" width="6" x="50" y="20"></rect>
+<rect height="6" width="6" x="40" y="35"></rect>
+<rect height="6" width="6" x="55" y="35"></rect>
+<rect height="6" width="6" x="10" y="45"></rect>
+<rect height="6" width="6" x="25" y="45"></rect>
+<rect height="6" width="6" x="40" y="50"></rect>
+<rect height="6" width="6" x="50" y="50"></rect>
+<rect height="6" width="6" x="70" y="45"></rect>
+<rect height="6" width="6" x="85" y="45"></rect>
+<rect height="6" width="6" x="70" y="60"></rect>
+<rect height="6" width="6" x="80" y="70"></rect>
+<rect height="6" width="6" x="40" y="70"></rect>
+<rect height="6" width="6" x="55" y="75"></rect>
+<rect height="6" width="6" x="40" y="85"></rect>
+<rect height="6" width="6" x="50" y="85"></rect>
+<rect height="6" width="6" x="75" y="85"></rect>
+<rect height="6" width="6" x="85" y="85"></rect>
+</svg>
+<div class="mt-2 text-center">
+<span class="font-label-sm text-label-sm text-primary font-bold">TOKEN: SKH-2026-9921</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-center">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-primary-container transition-colors" data-path="validasi-bap" href="#">
+<span>Buka Portal Verifikasi BAP Mandiri</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Security & Institutional Integrity Banner -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md lg:p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">shield</span>
+</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface">
+            Jaminan Integritas &amp; Otentisitas Data Hasil Uji BBPOM di Palangka Raya
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl leading-relaxed mt-0.5">
+            Hasil uji laboratorium diterbitkan oleh Balai Besar POM di Palangka Raya sesuai Sistem Manajemen Mutu Laboratorium Pengujian ISO/IEC 17025. Data terenkripsi dan terhubung secara langsung pada repositori Berita Acara Pemeriksaan (BAP) resmi Pemerintah Republik Indonesia.
+          </p>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-space-sm py-1 rounded-full bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+          Terdaftar di KAN
+        </span>
+</div>
+</div>
+</div>
+<!-- Inline Tab Switcher Logic -->
+<script>
+    function switchDetailTab(tabKey) {
+      const tabLab = document.getElementById('tab-lab');
+      const tabSarana = document.getElementById('tab-sarana');
+      const contentLab = document.getElementById('content-lab-view');
+      const contentSarana = document.getElementById('content-sarana-view');
+
+      if (tabKey === 'lab') {
+        // Toggle Buttons State
+        tabLab.className = "tab-button inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-primary shadow-sm";
+        tabSarana.className = "tab-button inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface";
+        
+        // Show Lab View, Keep Sarana visible as preview underneath or scroll
+        contentLab.classList.remove('hidden');
+        contentLab.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        // Toggle Buttons State
+        tabSarana.className = "tab-button inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-all bg-surface-container-lowest text-primary shadow-sm";
+        tabLab.className = "tab-button inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface";
+        
+        // Scroll directly to Sarana section
+        contentSarana.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(15,23,42,0.03)] mt-space-xl"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-xl"><div><div class="flex items-center gap-space-sm mb-space-md"><img alt="Logo Si Kahayan BBPOM Palangka Raya" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X-tgFceBv1BKf8EqX4jgo53yBnC2TXSLVoXb-J9bKm9B-0NSUosF_qhXmQrCPWTSDBOXe6DVp33M-CjU-MNPzFBtdiEGQWpL0tO2mFzUJXAqA3iXAXQ3Dywdcj8_4iiuYj3Y4DsBll-K6FmN1SxtPHlajq9HBYPazCZY2QZWtwWlU4AgU36Jcwg1A7_Gs1KyBOXXvAUUHbfna0YYfkiVpQDg_xMPKGL6wx4MKj_d3ogu5ZAJ-gH1QEL-Y"/><span class="font-title-sm text-title-sm text-primary">Si Kahayan</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">Sistem Informasi Kawal Hasil Pengawasan Obat dan Makanan terpadu di wilayah Provinsi Kalimantan Tengah.</p><div class="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary bg-surface-container-low px-space-sm py-space-xs rounded-full"><span class="material-symbols-outlined text-[16px]">verified_user</span><span>Portal Resmi BPOM RI</span></div></div><div><h3 class="font-title-sm text-title-sm text-on-surface mb-space-md">Alamat Operasional</h3><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Balai Besar POM di Palangka Raya<br/>Jl. Yos Sudarso No. 83, Palangka Raya,<br/>Kalimantan Tengah 73111</p></div><div><h3 class="font-title-sm text-title-sm text-on-surface mb-space-md">Layanan Kontak &amp; Aduan</h3><ul class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><span class="font-label-sm text-label-sm text-on-surface block">Contact Center:</span>Halo BPOM 1500533</li><li><span class="font-label-sm text-label-sm text-on-surface block">Surel Resmi:</span>bapom_palangkaraya@pom.go.id</li><li><span class="font-label-sm text-label-sm text-on-surface block">Pengaduan Masyarakat:</span>ULPK BBPOM di Palangka Raya</li></ul></div><div><h3 class="font-title-sm text-title-sm text-on-surface mb-space-md">Tautan Publik</h3><ul class="space-y-space-sm font-label-md text-label-md text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="beranda" href="#">Beranda Utama</a></li><li><a class="hover:text-primary transition-colors" data-path="hasil-pengawasan" href="#">Laporan Pengawasan</a></li><li><a class="hover:text-primary transition-colors" data-path="cari-produk-dan-sarana" href="#">Cek Produk &amp; Izin Edar</a></li><li><a class="hover:text-primary transition-colors" data-path="validasi-bap" href="#">Verifikasi BAP Digital</a></li><li><a class="hover:text-primary transition-colors" data-path="panduan" href="#">Panduan Pelaku Usaha</a></li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><p>© 2026 Balai Besar POM di Palangka Raya. Hak Cipta Dilindungi Undang-Undang.</p><p class="font-label-sm text-label-sm text-on-surface-variant">Integritas Pengawasan • Transparansi Publik • Bumi Tambun Bungai</p></div></div></footer></body></html>

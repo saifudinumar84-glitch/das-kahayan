@@ -46,6 +46,16 @@ class FoodType extends Model
     }
 
     /**
+     * Alias for category relation.
+     *
+     * @return BelongsTo<FoodCategory, $this>
+     */
+    public function foodCategory(): BelongsTo
+    {
+        return $this->category();
+    }
+
+    /**
      * Samplings involving this food type.
      *
      * @return HasMany<Sampling, $this>

@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error-container":"#93000a","on-primary-fixed-variant":"#00513a","surface-container":"#e5eeff","tertiary-fixed":"#ffddb4","surface-bright":"#f8f9ff","on-tertiary-fixed":"#291800","background":"#f8f9ff","primary-fixed":"#a1f3cf","error":"#ba1a1a","inverse-on-surface":"#eaf1ff","primary-fixed-dim":"#86d6b4","outline":"#6f7a73","outline-variant":"#bec9c2","on-surface":"#0b1c30","error-container":"#ffdad6","on-tertiary-container":"#ffcf92","tertiary-container":"#825400","on-tertiary-fixed-variant":"#633f00","surface-dim":"#cbdbf5","surface-container-high":"#dce9ff","on-secondary-fixed":"#002020","on-tertiary":"#ffffff","surface":"#f8f9ff","primary-container":"#0f6b4f","secondary-container":"#8ff3f2","primary":"#00513a","on-background":"#0b1c30","on-primary-fixed":"#002115","on-secondary-fixed-variant":"#004f50","surface-variant":"#d3e4fe","surface-container-low":"#eff4ff","on-secondary":"#ffffff","tertiary":"#623f00","on-surface-variant":"#3f4944","on-error":"#ffffff","on-secondary-container":"#007070","secondary-fixed":"#8ff3f2","tertiary-fixed-dim":"#ffb955","secondary":"#006a6a","surface-tint":"#106b4f","inverse-primary":"#86d6b4","surface-container-lowest":"#ffffff","on-primary":"#ffffff","secondary-fixed-dim":"#72d6d6","on-primary-container":"#97e8c5","surface-container-highest":"#d3e4fe","inverse-surface":"#213145"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2.5rem","space-xs":"0.25rem","margin-mobile":"1rem","space-sm":"0.5rem","gutter":"1.5rem","space-md":"1rem","margin":"2rem","gutter-mobile":"1rem","space-lg":"1.5rem"},fontFamily:{"label-md":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"body-sm":["Inter"],"title-sm":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},fontSize:{"label-md":["0.875rem",{lineHeight:"1.25rem",fontWeight:"600"}],"body-lg":["1.125rem",{lineHeight:"1.75rem",fontWeight:"400"}],"body-md":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}],"display-lg-mobile":["2.25rem",{lineHeight:"2.75rem",fontWeight:"700"}],"headline-xl":["2rem",{lineHeight:"2.5rem",fontWeight:"700"}],"label-sm":["0.75rem",{lineHeight:"1rem",fontWeight:"600"}],"headline-md":["1.25rem",{lineHeight:"1.75rem",fontWeight:"600"}],"body-sm":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"title-sm":["1rem",{lineHeight:"1.5rem",fontWeight:"600"}],"display-lg":["3rem",{lineHeight:"3.5rem",fontWeight:"700"}],"headline-lg":["1.5rem",{lineHeight:"2rem",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,23,42,0.05)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><img alt="Logo Si Kahayan BBPOM Palangka Raya" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X-tgFceBv1BKf8EqX4jgo53yBnC2TXSLVoXb-J9bKm9B-0NSUosF_qhXmQrCPWTSDBOXe6DVp33M-CjU-MNPzFBtdiEGQWpL0tO2mFzUJXAqA3iXAXQ3Dywdcj8_4iiuYj3Y4DsBll-K6FmN1SxtPHlajq9HBYPazCZY2QZWtwWlU4AgU36Jcwg1A7_Gs1KyBOXXvAUUHbfna0YYfkiVpQDg_xMPKGL6wx4MKj_d3ogu5ZAJ-gH1QEL-Y"/><div class="flex flex-col"><span class="font-title-sm text-title-sm text-primary tracking-tight">Si Kahayan</span><span class="font-label-sm text-label-sm text-on-surface-variant">Balai Besar POM di Palangka Raya</span></div></div><nav class="hidden xl:flex items-center gap-space-xs p-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="beranda" href="#">Beranda</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="hasil-pengawasan" href="#">Hasil Pengawasan</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="cari-produk-dan-sarana" href="#">Cari Produk &amp; Sarana</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="validasi-bap" href="#">Validasi BAP</a><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-label-md rounded-lg" data-path="panduan" href="#">Panduan</a></nav><div class="flex items-center gap-space-md"><a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary-container hover:bg-primary text-on-primary transition-colors font-label-md text-label-md shadow-[0_1px_3px_0_rgba(15,23,42,0.05)]" data-path="login" href="#"><span class="material-symbols-outlined text-[18px]">lock</span><span>Masuk Pelaku Usaha</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- Decorative Kahayan River Pattern Gradient Mesh Background -->
+<div class="relative w-full bg-surface-container-low/40 overflow-hidden">
+<!-- Subtle River Flow Motif Overlay -->
+<div class="absolute inset-0 pointer-events-none opacity-40 mix-blend-multiply">
+<svg class="w-full h-full text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 1440 380">
+<path d="M-100,120 C320,240 680,20 1080,140 C1280,200 1520,80 1600,110 L1600,0 L-100,0 Z" fill="currentColor" fill-opacity="0.03"></path>
+<path d="M-80,180 C360,60 740,240 1140,110 C1340,50 1480,190 1620,130 L1620,0 L-80,0 Z" fill="currentColor" fill-opacity="0.02"></path>
+</svg>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin pt-space-lg pb-space-xl relative z-10">
+<!-- Breadcrumb Navigation -->
+<nav aria-label="Jalur Navigasi" class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant mb-space-lg">
+<a class="inline-flex items-center gap-1 hover:text-primary transition-colors" data-path="beranda" href="#">
+<span class="material-symbols-outlined text-[18px]">home</span>
+<span>Beranda</span>
+</a>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">chevron_right</span>
+<span class="text-primary font-label-md font-medium">Panduan</span>
+</nav>
+<!-- Hero Header Container -->
+<div class="max-w-4xl">
+<!-- Institution Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-lowest text-primary shadow-sm mb-space-md">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Pusat Edukasi &amp; Bantuan Informasi Publik</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mb-space-sm">
+          Panduan Penggunaan Portal Si Kahayan
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-space-lg">
+          Pelajari tata cara mengakses data transparansi pengawasan pangan, alur tindak lanjut CAPA sarana produksi, dan mekanisme validasi keaslian dokumen BAP di wilayah Kalimantan Tengah.
+        </p>
+<!-- Search Bar with Elevation -->
+<div class="relative bg-surface-container-lowest p-space-xs rounded-xl shadow-md max-w-3xl mb-space-md">
+<div class="flex items-center gap-space-sm pl-space-sm pr-1">
+<span class="material-symbols-outlined text-outline text-[24px]">search</span>
+<input class="w-full bg-transparent border-0 outline-none text-on-surface font-body-md text-body-md placeholder:text-outline py-space-sm" id="guide-search-input" placeholder="Cari topik bantuan, kata kunci panduan, atau pertanyaan umum..." type="text"/>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-space-lg py-space-sm rounded-lg transition-colors flex items-center gap-space-xs flex-shrink-0" onclick="triggerSearchHighlight()" type="button">
+<span>Cari Solusi</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Quick Tag Shortcuts -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-1">Pencarian Populer:</span>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm transition-colors" onclick="fillSearch('Cara Baca MS/TMS')">
+            Cara Baca MS/TMS
+          </button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm transition-colors" onclick="fillSearch('Unggah CAPA')">
+            Unggah CAPA
+          </button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm transition-colors" onclick="fillSearch('Scan QR BAP')">
+            Scan QR BAP
+          </button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm transition-colors" onclick="fillSearch('Aduan Pangan')">
+            Aduan Pangan Berbahaya
+          </button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm transition-colors" onclick="fillSearch('Pangan Lokal Kalteng')">
+            Pangan Khas Kalteng
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Segmented Audience Control Tabs -->
+<div class="w-full bg-surface-container-lowest sticky top-20 z-30 shadow-sm">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex items-center gap-space-md py-space-sm overflow-x-auto no-scrollbar" role="tablist">
+<!-- Tab 1: Masyarakat -->
+<button aria-selected="true" class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-all whitespace-nowrap bg-primary-container text-on-primary shadow-sm" id="tab-public" onclick="switchTab('public')" role="tab">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+<span>Masyarakat &amp; Konsumen</span>
+<span class="ml-1 px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-lowest text-primary font-bold">14 Kab/Kota</span>
+</button>
+<!-- Tab 2: Pelaku Usaha -->
+<button aria-selected="false" class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-all whitespace-nowrap text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low" id="tab-business" onclick="switchTab('business')" role="tab">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+<span>Pelaku Usaha (Produsen &amp; Distributor)</span>
+<span class="ml-1 px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface-variant">Alur CAPA</span>
+</button>
+<!-- Tab 3: Validasi BAP -->
+<button aria-selected="false" class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-all whitespace-nowrap text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low" id="tab-bap" onclick="switchTab('bap')" role="tab">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+<span>Cara Validasi Dokumen BAP</span>
+<span class="ml-1 px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface-variant">BSrE BSSN</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Content Layout (12-Column Grid: 8 Cols Main, 4 Cols Sticky Sidebar) -->
+<div class="max-w-[1280px] mx-auto w-full px-margin-mobile lg:px-margin py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column (8 Columns) -->
+<div class="lg:col-span-8 flex flex-col gap-space-xl">
+<!-- SECTION 1: Step-by-Step Practical Guides -->
+<section class="flex flex-col gap-space-lg" id="section-langkah">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-1.5 h-6 bg-primary rounded-full"></span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+                  Langkah Praktis Penggunaan
+                </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Panduan terstruktur menelusuri rekam pengawasan mutu produk dan sarana di Kalimantan Tengah.
+              </p>
+</div>
+<span class="hidden sm:inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary bg-surface-container-low px-space-md py-1 rounded-full">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+              Interaktif &amp; Terbuka
+            </span>
+</div>
+<!-- 4 Step Cards Stacked / Grid -->
+<div class="flex flex-col gap-space-md">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all group">
+<div class="flex items-start gap-space-md">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-container/10 text-primary flex items-center justify-center font-headline-md text-headline-md font-bold group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                  01
+                </div>
+<div class="flex-1">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">manage_search</span>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold">Mencari Produk atau Sarana Terdaftar</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+                    Gunakan kolom pencarian umum atau filter spasial 14 Kabupaten/Kota se-Kalimantan Tengah. Sistem memudahkan penelusuran rekam uji laboratorium untuk komoditas pangan lokal unggulan seperti <strong>Ikan Patin Asap</strong>, <strong>Keripik Kelakai</strong>, <strong>Bawang Dayak</strong>, hingga sarana toko ritel dan gudang distributor.
+                  </p>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-space-sm text-body-sm font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">tips_and_updates</span>
+<span><strong>Tips Praktis:</strong> Masukkan nomor registrasi MD/ML atau nama merek untuk mencocokkan nomor izin edar yang terdaftar di BPOM RI.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all group">
+<div class="flex items-start gap-space-md">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-secondary-container/30 text-secondary flex items-center justify-center font-headline-md text-headline-md font-bold group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+                  02
+                </div>
+<div class="flex-1">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-secondary text-[20px]">rule</span>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold">Memahami Hasil Uji Laboratorium (MS vs TMS)</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+                    Setiap sampel pangan yang diuji di laboratorium BBPOM di Palangka Raya diklasifikasikan dengan indikator visual ketat:
+                  </p>
+<!-- Comparison Sub-Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm mb-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm flex items-start gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-primary mt-1.5 flex-shrink-0"></div>
+<div>
+<div class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-bold">
+<span>Memenuhi Syarat (MS)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                          Aman dikonsumsi. Bebas dari batas cemaran mikroba berbahaya, tidak mengandung zat kimia terlarang (Formalin, Boraks, Kuning Metanil, Rhodamin B).
+                        </p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-error-container/20 flex items-start gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-error mt-1.5 flex-shrink-0"></div>
+<div>
+<div class="inline-flex items-center gap-1 font-label-md text-label-md text-error font-bold">
+<span>Tidak Memenuhi Syarat (TMS)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+                          Berisiko bagi kesehatan publik. Terindikasi cemaran melebihi ambang batas aman atau pemakaian bahan berbahaya yang dilarang UU Kesehatan.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all group">
+<div class="flex items-start gap-space-md">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-headline-md text-headline-md font-bold group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+                  03
+                </div>
+<div class="flex-1">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">qr_code_scanner</span>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold">Memeriksa Keaslian Dokumen BAP Digital</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+                    Setiap Berita Acara Pemeriksaan (BAP) lapangan fisik dilengkapi dengan <strong>Secure Dynamic QR Code</strong> dan kode seri unik. Lakukan pemindaian kamera ponsel cerdas Anda atau salin kode token pengesahan ke menu Validasi Dokumen.
+                  </p>
+<div class="flex items-center gap-space-md text-body-sm font-body-sm text-on-surface-variant">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">lock_reset</span>
+                      Anti-Pemalsuan
+                    </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                      Tersertifikasi BSrE
+                    </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all group">
+<div class="flex items-start gap-space-md">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center font-headline-md text-headline-md font-bold group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                  04
+                </div>
+<div class="flex-1">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">support_agent</span>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold">Saluran Konsultasi &amp; Pengaduan Cepat</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+                    Menemukan pangan kedaluwarsa, label tanpa izin edar, atau dugaan zat kimia beracun di pasar tradisional? Anda dapat menyampaikan aduan publik yang dilindungi kerahasiaan identitasnya langsung ke meja Unit Layanan Pengaduan Konsumen (ULPK).
+                  </p>
+<a class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-md text-label-md" data-path="kontak" href="#">
+<span>Ajukan Laporan Konsumen</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Workflow for Business Actors (CAPA Timeline) -->
+<section class="flex flex-col gap-space-md" id="section-capa">
+<div class="flex items-center gap-2 mb-1">
+<span class="w-1.5 h-6 bg-secondary rounded-full"></span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+              Panduan Khusus Pelaku Usaha (Alur CAPA)
+            </h2>
+</div>
+<!-- Highlight Card for CAPA Lifecycle -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md mb-space-md border-b-0">
+<div>
+<span class="px-space-sm py-0.5 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+                  Kepatuhan Standar Mutu
+                </span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1">
+                  Tindak Lanjut Perbaikan Hasil Inspeksi (CPPOB / CPerPOB)
+                </h3>
+</div>
+<div class="text-right mt-2 md:mt-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Masa Retensi Tindak Lanjut</span>
+<span class="font-title-sm text-title-sm text-primary font-bold">14 - 30 Hari Kerja</span>
+</div>
+</div>
+<!-- Visual Horizontal Step Tracker -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm mb-space-lg">
+<!-- Milestone 1 -->
+<div class="bg-surface-container-low p-space-md rounded-xl relative">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md font-bold">1</span>
+<span class="material-symbols-outlined text-primary text-[20px]">notifications_active</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-semibold mb-1">Notifikasi Temuan</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Terima lembar hasil rekomendasi pemeriksaan dan temuan lapangan dari petugas pengawas.</p>
+</div>
+<!-- Milestone 2 -->
+<div class="bg-surface-container-low p-space-md rounded-xl relative">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md font-bold">2</span>
+<span class="material-symbols-outlined text-primary text-[20px]">edit_document</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-semibold mb-1">Susun Form CAPA</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Login ke portal Si Kahayan, isi formulir Corrective &amp; Preventive Action sesuai format standar BPOM.</p>
+</div>
+<!-- Milestone 3 -->
+<div class="bg-surface-container-low p-space-md rounded-xl relative">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-md text-label-md font-bold">3</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">cloud_upload</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-semibold mb-1">Unggah Bukti</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lampirkan foto fisik fasilitas sebelum-sesudah, log sanitasi, atau sertifikat kalibrasi instrumen.</p>
+</div>
+<!-- Milestone 4 -->
+<div class="bg-surface-container-low p-space-md rounded-xl relative">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md text-label-md font-bold">4</span>
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-semibold mb-1">Pengesahan Balai</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Evaluator BBPOM memvalidasi bukti. Status otomatis beralih menjadi <em>Close CAPA Disetujui</em>.</p>
+</div>
+</div>
+<!-- Action Bar Inside CAPA Box -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md bg-surface-container-lowest">
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">info</span>
+<span>Kendala akses akun? Hubungi Tim Pembina Mutu UMKM BBPOM Palangka Raya.</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<a class="flex-1 sm:flex-none inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Template CAPA (.Docx)</span>
+</a>
+<a class="flex-1 sm:flex-none inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-primary hover:bg-primary-container text-on-primary transition-colors font-label-md text-label-md shadow-sm" data-path="login" href="#">
+<span class="material-symbols-outlined text-[18px]">login</span>
+<span>Portal Pelaku Usaha</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: FAQ Accordion -->
+<section class="flex flex-col gap-space-md" id="section-faq">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-6 bg-tertiary-container rounded-full"></span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+                Pertanyaan yang Sering Diajukan (FAQ)
+              </h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden sm:inline">Diperbarui: Maret 2026</span>
+</div>
+<div class="flex flex-col gap-space-xs" id="faq-container">
+<!-- FAQ Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all faq-card">
+<button aria-expanded="false" class="w-full text-left p-space-md flex items-center justify-between gap-space-md hover:bg-surface-container-low transition-colors" onclick="toggleFaq(this)" type="button">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">
+                  Mengapa data NIB, NPWP, dan nama lengkap pemilik sarana tidak ditampilkan pada halaman publik?
+                </span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-icon text-[24px]">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                Portal Si Kahayan tunduk secara ketat pada prinsip kepatuhan <strong>Undang-Undang Keterbukaan Informasi Publik (UU No. 14 Tahun 2008)</strong> serta <strong>Undang-Undang Pelindungan Data Pribadi (UU No. 27 Tahun 2022)</strong>. Informasi yang disajikan kepada publik difokuskan pada aspek keselamatan produk, mutu peredaran, dan kelayakan sarana tanpa mempublikasikan identitas finansial atau data sensitif privat pemilik usaha.
+              </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all faq-card">
+<button aria-expanded="false" class="w-full text-left p-space-md flex items-center justify-between gap-space-md hover:bg-surface-container-low transition-colors" onclick="toggleFaq(this)" type="button">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">
+                  Apa tindakan konkret BBPOM di Palangka Raya jika ditemukan pangan olahan berstatus TMS?
+                </span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-icon text-[24px]">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                Apabila uji laboratorium menunjukkan status TMS (misal temuan bahan berbahaya atau cemaran mikroba melebihi batas toleransi), BBPOM di Palangka Raya secara sigap mengambil langkah intervensi:
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+<li>Pengamanan sementara dan penarikan <em>batch</em> produk dari rantai distribusi ritel.</li>
+<li>Pemberian Surat Peringatan Keras serta perintah pemusnahan barang bukti bermasalah.</li>
+<li>Pembinaan teknis formulasi atau perbaikan sarana melalui mekanisme CAPA wajib.</li>
+<li>Tindakan pro-justitia oleh Penyidik Pegawai Negeri Sipil (PPNS) bila terbukti ada unsur kesengajaan mengedarkan zat beracun berbahaya.</li>
+</ul>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all faq-card">
+<button aria-expanded="false" class="w-full text-left p-space-md flex items-center justify-between gap-space-md hover:bg-surface-container-low transition-colors" onclick="toggleFaq(this)" type="button">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">
+                  Bagaimana cara pelaku usaha memperoleh akun portal Si Kahayan?
+                </span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-icon text-[24px]">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                Akun portal Si Kahayan tidak dibuka untuk registrasi mandiri publik secara bebas demi menjaga integritas data pengawasan. Akun kredensial resmi diterbitkan secara terverifikasi oleh petugas BBPOM di Palangka Raya setelah sarana Anda resmi terdaftar dalam basis inspeksi berkala atau pasca pelaksanaan pemeriksaan lapangan. Kredensial akan dikirimkan ke surel resmi sarana yang tercatat pada database OSS/BPOM.
+              </div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all faq-card">
+<button aria-expanded="false" class="w-full text-left p-space-md flex items-center justify-between gap-space-md hover:bg-surface-container-low transition-colors" onclick="toggleFaq(this)" type="button">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">
+                  Apakah sertifikat dan dokumen BAP Si Kahayan memiliki kekuatan hukum resmi?
+                </span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-icon text-[24px]">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                Ya, sepenuhnya sah dan memiliki kekuatan hukum mengikat. Setiap Berita Acara Pemeriksaan (BAP) dan lembar rekomendasi yang diterbitkan oleh sistem Si Kahayan telah dilengkapi sertifikat elektronik tersertifikasi dari <strong>Balai Sertifikasi Elektronik (BSrE) - Badan Siber dan Sandi Negara (BSSN)</strong> sesuai dengan ketentuan UU ITE yang berlaku di Indonesia.
+              </div>
+</div>
+<!-- FAQ Item 5 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all faq-card">
+<button aria-expanded="false" class="w-full text-left p-space-md flex items-center justify-between gap-space-md hover:bg-surface-container-low transition-colors" onclick="toggleFaq(this)" type="button">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">
+                  Berapa lama batas waktu penyusunan dokumen CAPA bagi sarana binaan?
+                </span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 faq-icon text-[24px]">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                Waktu standar pemenuhan CAPA adalah <strong>14 (empat belas) hari kerja</strong> untuk temuan bersifat minor atau administratif, dan maksimal <strong>30 (tiga puluh) hari kerja</strong> untuk perbaikan sarana fisik berstatus mayor/kritis. Keterlambatan tanpa justifikasi tertulis dapat mengakibatkan penurunan skor indeks kepatuhan sarana pada portal Si Kahayan.
+              </div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Download Guidelines & Regulatory Documents -->
+<section class="flex flex-col gap-space-md" id="section-unduhan">
+<div class="flex items-center gap-2 mb-1">
+<span class="w-1.5 h-6 bg-primary rounded-full"></span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+              Unduh Dokumen Pedoman &amp; Regulasi
+            </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Doc 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="w-10 h-10 rounded-lg bg-error-container/20 text-error flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-semibold mb-1 line-clamp-2">
+                  Pedoman CPPOB untuk Pelaku Usaha Pangan Mikro &amp; Kecil
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md line-clamp-2">
+                  Standar implementasi tata kelola produksi higienis berbasis regulasi BPOM No. 22/2021.
+                </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0">
+<span class="font-label-sm text-label-sm text-outline">PDF • 2.4 MB</span>
+<a class="p-2 rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center" href="#" onclick="simulateDownload(this, 'Pedoman-CPPOB-UMKM.pdf'); return false;" title="Unduh Pedoman">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</a>
+</div>
+</div>
+<!-- Doc 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="w-10 h-10 rounded-lg bg-secondary-container/30 text-secondary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-semibold mb-1 line-clamp-2">
+                  Panduan Singkat Verifikasi Dokumen BAP Berbasis QR Code
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md line-clamp-2">
+                  Petunjuk praktis bagi aparat penegak hukum dan mitra daerah mengecek keaslian segel digital.
+                </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0">
+<span class="font-label-sm text-label-sm text-outline">PDF • 1.1 MB</span>
+<a class="p-2 rounded-lg bg-surface-container text-secondary hover:bg-secondary hover:text-on-secondary transition-colors flex items-center justify-center" href="#" onclick="simulateDownload(this, 'Panduan-Verifikasi-BAP.pdf'); return false;" title="Unduh Panduan">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</a>
+</div>
+</div>
+<!-- Doc 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed text-tertiary-container flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-on-surface font-semibold mb-1 line-clamp-2">
+                  Brosur Kenali Pangan Aman Bebas Bahan Berbahaya Kalteng
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md line-clamp-2">
+                  Materi edukasi visual deteksi cepat Rhodamin B, Boraks, dan Formalin pada kuliner khas.
+                </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0">
+<span class="font-label-sm text-label-sm text-outline">PDF • 3.8 MB</span>
+<a class="p-2 rounded-lg bg-surface-container text-tertiary-container hover:bg-tertiary-container hover:text-on-tertiary transition-colors flex items-center justify-center" href="#" onclick="simulateDownload(this, 'Brosur-Pangan-Aman-Kalteng.pdf'); return false;" title="Unduh Brosur">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sticky Assistance Sidebar (4 Columns) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md sticky top-36">
+<!-- Card 1: Help Desk ULPK BBPOM Palangka Raya -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Layanan BerAKHLAK
+              </span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1 font-bold">
+                Butuh Bantuan Langsung?
+              </h3>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">headset_mic</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Petugas Unit Layanan Pengaduan Konsumen (ULPK) Balai Besar POM di Palangka Raya siap membantu klarifikasi hasil uji dan konsultasi izin sarana.
+          </p>
+<!-- Contact Channels List -->
+<div class="space-y-space-sm pt-space-xs">
+<!-- Contact Center -->
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Contact Center Nasional</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Halo BPOM 1500533</span>
+<span class="font-body-sm text-body-sm text-outline block text-xs">Aktif 24 Jam (Hari Kerja &amp; Libur)</span>
+</div>
+</div>
+<!-- WhatsApp ULPK -->
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">WhatsApp Konsultasi Cepat</span>
+<a class="font-label-md text-label-md text-primary font-bold hover:underline" href="https://wa.me/628115227744" rel="noopener noreferrer" target="_blank">
+                  0811-522-7744
+                </a>
+<span class="font-body-sm text-body-sm text-outline block text-xs">Pesan Teks Jam Operasional</span>
+</div>
+</div>
+<!-- Email -->
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Surel Korespondensi</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold break-all">bapom_palangkaraya@pom.go.id</span>
+</div>
+</div>
+<!-- Working Hours -->
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Jam Layanan Tatap Muka</span>
+<span class="font-body-sm text-body-sm text-on-surface">Senin - Kamis: 08.00 - 16.30 WIB</span>
+<span class="font-body-sm text-body-sm text-on-surface block">Jumat: 08.00 - 16.00 WIB</span>
+</div>
+</div>
+<!-- Address -->
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Lokasi Pelayanan Terpadu</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+                  Jl. Yos Sudarso No. 83, Palangka Raya, Kalimantan Tengah 73111
+                </p>
+</div>
+</div>
+</div>
+<!-- Action CTA -->
+<a class="w-full inline-flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-colors shadow-sm" data-path="pengaduan" href="#">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+<span>Hubungi ULPK BBPOM Palangka Raya</span>
+</a>
+</div>
+<!-- Card 2: Quick Document Token Checker Widget -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">fingerprint</span>
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold">Validasi Dokumen Instan</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Punya dokumen BAP fisik? Masukkan nomor token seri untuk memastikan tanda tangan elektronik BSrE valid.
+          </p>
+<div class="flex flex-col gap-space-xs">
+<div class="relative">
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface placeholder:text-outline outline-none focus:ring-2 focus:ring-primary/20 uppercase" id="sidebar-token-input" placeholder="SKH-2026-XXXX" type="text"/>
+<button class="absolute right-1 top-1 bottom-1 px-space-md bg-secondary hover:bg-on-secondary-container text-on-secondary rounded-lg font-label-sm text-label-sm transition-colors flex items-center gap-1" onclick="quickVerifyBap()" type="button">
+<span>Cek</span>
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</button>
+</div>
+<div class="hidden text-xs font-medium p-2 rounded-lg mt-1" id="quick-verify-result"></div>
+<div class="flex items-center gap-1 text-[11px] text-outline pt-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Terhubung dengan repositori kriptografi BBPOM</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Realtime Dashboard Info Statistics -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<h4 class="font-title-sm text-title-sm text-on-surface font-bold">Statistik Pusat Edukasi</h4>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs text-center">
+<div class="p-space-xs bg-surface-container-low rounded-lg">
+<span class="font-headline-md text-headline-md text-primary font-bold block">1.428</span>
+<span class="text-[11px] font-label-sm text-on-surface-variant leading-tight block">Sampel Diuji</span>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded-lg">
+<span class="font-headline-md text-headline-md text-secondary font-bold block">14</span>
+<span class="text-[11px] font-label-sm text-on-surface-variant leading-tight block">Kab / Kota</span>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded-lg">
+<span class="font-headline-md text-headline-md text-tertiary font-bold block">&lt;24j</span>
+<span class="text-[11px] font-label-sm text-on-surface-variant leading-tight block">Respons Aduan</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Regulatory Transparency Banner -->
+<div class="w-full bg-surface-container-low mt-space-xl">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin py-space-lg">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-semibold">
+              Keterbukaan Informasi Publik yang Bertanggung Jawab
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Seluruh petunjuk, modul dan publikasi status sarana pada portal Si Kahayan disusun mengacu pada SOP Resmi Balai Besar POM di Palangka Raya demi mewujudkan tata kelola pengawasan obat dan makanan yang akuntabel, transparan, dan melindungi masyarakat Kalimantan Tengah.
+            </p>
+</div>
+</div>
+<div class="flex-shrink-0">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-primary-container font-semibold transition-colors" data-path="kebijakan-privasi" href="#">
+<span>Kebijakan Keterbukaan Data</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Script for Micro-Interactions -->
+<script>
+    // Tab Switching Mechanism
+    function switchTab(tabKey) {
+      const tabs = ['public', 'business', 'bap'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('tab-' + t);
+        if (t === tabKey) {
+          btn.setAttribute('aria-selected', 'true');
+          btn.className = 'flex items-center gap-space-xs px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-all whitespace-nowrap bg-primary-container text-on-primary shadow-sm';
+        } else {
+          btn.setAttribute('aria-selected', 'false');
+          btn.className = 'flex items-center gap-space-xs px-space-md py-space-sm rounded-lg font-label-md text-label-md transition-all whitespace-nowrap text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low';
+        }
+      });
+
+      // Target section scroll
+      if (tabKey === 'public') {
+        const el = document.getElementById('section-langkah');
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else if (tabKey === 'business') {
+        const el = document.getElementById('section-capa');
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else if (tabKey === 'bap') {
+        const input = document.getElementById('sidebar-token-input');
+        if (input) {
+          input.focus();
+          input.classList.add('ring-2', 'ring-secondary');
+          setTimeout(() => input.classList.remove('ring-2', 'ring-secondary'), 1600);
+        }
+      }
+    }
+
+    // FAQ Accordion Toggle
+    function toggleFaq(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+      if (isExpanded) {
+        btn.setAttribute('aria-expanded', 'false');
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        btn.setAttribute('aria-expanded', 'true');
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // Search Box Quick Fill
+    function fillSearch(keyword) {
+      const input = document.getElementById('guide-search-input');
+      if (input) {
+        input.value = keyword;
+        triggerSearchHighlight();
+      }
+    }
+
+    // Search Trigger Feedback
+    function triggerSearchHighlight() {
+      const input = document.getElementById('guide-search-input');
+      const val = input.value.trim().toLowerCase();
+      if (!val) return;
+
+      const faqs = document.querySelectorAll('.faq-card');
+      let found = false;
+
+      faqs.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(val)) {
+          card.classList.remove('bg-surface-container-lowest');
+          card.classList.add('bg-surface-container-high');
+          const btn = card.querySelector('button');
+          const content = card.querySelector('.faq-content');
+          const icon = card.querySelector('.faq-icon');
+          btn.setAttribute('aria-expanded', 'true');
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+          if (!found) {
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            found = true;
+          }
+          setTimeout(() => {
+            card.classList.remove('bg-surface-container-high');
+            card.classList.add('bg-surface-container-lowest');
+          }, 2400);
+        }
+      });
+    }
+
+    // Quick BAP Verifier Mock
+    function quickVerifyBap() {
+      const input = document.getElementById('sidebar-token-input');
+      const res = document.getElementById('quick-verify-result');
+      const token = input.value.trim().toUpperCase();
+
+      if (!token) {
+        res.className = 'text-xs font-semibold p-2 rounded-lg mt-1 bg-error-container text-on-error-container block';
+        res.textContent = 'Harap isi format token (Contoh: SKH-2026-0081).';
+        res.classList.remove('hidden');
+        return;
+      }
+
+      res.className = 'text-xs font-semibold p-2 rounded-lg mt-1 bg-primary-fixed text-on-primary-fixed block';
+      res.textContent = 'Memverifikasi ke server BSrE BSSN...';
+      res.classList.remove('hidden');
+
+      setTimeout(() => {
+        res.className = 'text-xs font-semibold p-2 rounded-lg mt-1 bg-surface-container-high text-primary block';
+        res.innerHTML = '✓ Dokumen BAP Sah! Ditandatangani digital oleh Kepala Balai Besar POM di Palangka Raya.';
+      }, 700);
+    }
+
+    // Download Simulation
+    function simulateDownload(el, fileName) {
+      const prevHtml = el.innerHTML;
+      el.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span>';
+      setTimeout(() => {
+        el.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span>';
+        setTimeout(() => {
+          el.innerHTML = prevHtml;
+        }, 1500);
+      }, 800);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(15,23,42,0.03)] mt-space-xl"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-xl"><div><div class="flex items-center gap-space-sm mb-space-md"><img alt="Logo Si Kahayan BBPOM Palangka Raya" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X-tgFceBv1BKf8EqX4jgo53yBnC2TXSLVoXb-J9bKm9B-0NSUosF_qhXmQrCPWTSDBOXe6DVp33M-CjU-MNPzFBtdiEGQWpL0tO2mFzUJXAqA3iXAXQ3Dywdcj8_4iiuYj3Y4DsBll-K6FmN1SxtPHlajq9HBYPazCZY2QZWtwWlU4AgU36Jcwg1A7_Gs1KyBOXXvAUUHbfna0YYfkiVpQDg_xMPKGL6wx4MKj_d3ogu5ZAJ-gH1QEL-Y"/><span class="font-title-sm text-title-sm text-primary">Si Kahayan</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">Sistem Informasi Kawal Hasil Pengawasan Obat dan Makanan terpadu di wilayah Provinsi Kalimantan Tengah.</p><div class="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary bg-surface-container-low px-space-sm py-space-xs rounded-full"><span class="material-symbols-outlined text-[16px]">verified_user</span><span>Portal Resmi BPOM RI</span></div></div><div><h3 class="font-title-sm text-title-sm text-on-surface mb-space-md">Alamat Operasional</h3><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Balai Besar POM di Palangka Raya<br/>Jl. Yos Sudarso No. 83, Palangka Raya,<br/>Kalimantan Tengah 73111</p></div><div><h3 class="font-title-sm text-title-sm text-on-surface mb-space-md">Layanan Kontak &amp; Aduan</h3><ul class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><span class="font-label-sm text-label-sm text-on-surface block">Contact Center:</span>Halo BPOM 1500533</li><li><span class="font-label-sm text-label-sm text-on-surface block">Surel Resmi:</span>bapom_palangkaraya@pom.go.id</li><li><span class="font-label-sm text-label-sm text-on-surface block">Pengaduan Masyarakat:</span>ULPK BBPOM di Palangka Raya</li></ul></div><div><h3 class="font-title-sm text-title-sm text-on-surface mb-space-md">Tautan Publik</h3><ul class="space-y-space-sm font-label-md text-label-md text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="beranda" href="#">Beranda Utama</a></li><li><a class="hover:text-primary transition-colors" data-path="hasil-pengawasan" href="#">Laporan Pengawasan</a></li><li><a class="hover:text-primary transition-colors" data-path="cari-produk-dan-sarana" href="#">Cek Produk &amp; Izin Edar</a></li><li><a class="hover:text-primary transition-colors" data-path="validasi-bap" href="#">Verifikasi BAP Digital</a></li><li><a class="hover:text-primary transition-colors" data-path="panduan" href="#">Panduan Pelaku Usaha</a></li></ul></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><p>© 2026 Balai Besar POM di Palangka Raya. Hak Cipta Dilindungi Undang-Undang.</p><p class="font-label-sm text-label-sm text-on-surface-variant">Integritas Pengawasan • Transparansi Publik • Bumi Tambun Bungai</p></div></div></footer></body></html>

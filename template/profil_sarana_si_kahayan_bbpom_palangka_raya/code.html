@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-surface":"#213145","on-error-container":"#93000a","surface-variant":"#d3e4fe","on-primary-fixed":"#002115","primary-fixed-dim":"#86d6b4","inverse-on-surface":"#eaf1ff","tertiary":"#623f00","on-tertiary-fixed":"#291800","on-background":"#0b1c30","on-surface-variant":"#3f4944","surface-container-lowest":"#ffffff","secondary-container":"#8ff3f2","on-surface":"#0b1c30","surface-container-low":"#eff4ff","tertiary-fixed-dim":"#ffb955","on-primary-container":"#97e8c5","background":"#f8f9ff","surface-dim":"#cbdbf5","on-secondary-fixed":"#002020","primary-container":"#0f6b4f","primary":"#00513a","on-primary-fixed-variant":"#00513a","surface-tint":"#106b4f","tertiary-container":"#825400","inverse-primary":"#86d6b4","on-primary":"#ffffff","outline":"#6f7a73","on-tertiary-fixed-variant":"#633f00","surface-container-highest":"#d3e4fe","surface-bright":"#f8f9ff","error-container":"#ffdad6","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#004f50","secondary-fixed":"#8ff3f2","on-secondary":"#ffffff","surface-container-high":"#dce9ff","secondary-fixed-dim":"#72d6d6","on-tertiary-container":"#ffcf92","surface":"#f8f9ff","on-secondary-container":"#007070","primary-fixed":"#a1f3cf","surface-container":"#e5eeff","secondary":"#006a6a","on-error":"#ffffff","tertiary-fixed":"#ffddb4","error":"#ba1a1a","outline-variant":"#bec9c2"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","gutter":"1.5rem","margin-mobile":"1rem","space-md":"1rem","margin":"2rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-lg":"1.5rem"},"fontFamily":{"label-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-xl":["Plus Jakarta Sans"],"title-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"label-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"600"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-xl":["2rem",{"lineHeight":"2.5rem","fontWeight":"700"}],"title-sm":["1rem",{"lineHeight":"1.5rem","fontWeight":"600"}],"display-lg-mobile":["2.25rem",{"lineHeight":"2.75rem","fontWeight":"700"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1rem","fontWeight":"600"}],"display-lg":["3rem",{"lineHeight":"3.5rem","fontWeight":"700"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Brand logo. - Primary color: #0f6b4f - Font: plusJakartaSans - Mode: light - Roundness: rounded-md" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XmEAYYP_2FYkFtafVIdCsgduAG_nRNtBHQ_u0gdqdUNpQnZAUDNUV8YbeqTMo7AYkl50QL3IrUt-uw42JcwIeLcTRcFDemgtm0bIhyTc1-GtzDPvaUW9heXqga3ARG9V4v3aeFuqUuJOKtGV-llL5rzmSuPo3aX5ledIfILCulL67JbAmtfXAualW8DWrAeFMF51G036IHlZy6nDSfAASDZXxMdKqqSiMqRKbgmIivTji2xhUZj7C2mXmL"/><div class="flex flex-col"><span class="font-headline-md text-primary leading-tight font-bold tracking-tight">Si Kahayan</span><span class="font-label-sm text-on-surface-variant leading-none">BBPOM di Palangka Raya</span></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm bg-surface-container-low rounded-lg"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-on-surface">Portal Pelaku Usaha</span></div><p class="font-label-sm text-on-surface-variant truncate mt-0.5">Sentra Layanan Pengawasan &amp; CAPA</p></div></div><nav class="flex flex-col gap-1 px-space-md mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-label-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="pemeriksaan-sarana" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-label-md">Pemeriksaan Sarana</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="temuan-dan-capa" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">assignment_late</span><span class="font-label-md">Temuan &amp; CAPA</span></div><span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[11px]">2</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dokumen" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span class="font-label-md">Dokumen</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="riwayat" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span class="font-label-md">Riwayat</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="profil-sarana" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-label-md">Profil Sarana</span></a></nav></div><div class="p-space-md bg-surface-container-lowest flex flex-col gap-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-label-sm text-on-surface-variant">Status Izin CPPOB</span><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm">Aktif (MS)</span></div><p class="font-label-sm text-on-surface font-semibold truncate">UD. Berkah Mandiri Patin</p></div><div class="flex items-center justify-between pt-space-xs"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-label-sm text-on-surface font-semibold truncate max-w-[110px]">Hj. Rusmini</span><span class="font-label-sm text-on-surface-variant text-[11px]">Penanggung Jawab</span></div></div><a class="p-2 text-on-surface-variant hover:text-error hover:bg-error-container/40 rounded-lg transition-colors" data-path="login" href="#" title="Keluar / Logout"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center gap-space-xs px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface cursor-pointer hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-primary text-[18px]">domain</span><div class="flex flex-col text-left"><span class="font-label-sm text-on-surface truncate max-w-[220px]">UD. Berkah Mandiri Patin</span><span class="text-[10px] text-on-surface-variant leading-none">CPPOB Produsen • Palangka Raya</span></div><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-3 py-1.5 rounded-lg bg-surface-container-low font-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary transition-all" placeholder="Cari nomor permohonan, CAPA, surat tugas..." type="text"/></div></div><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm"><span class="w-2 h-2 rounded-full bg-primary"></span><span>BBPOM Siap Melayani</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Bantuan &amp; Regulasi" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><button class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Notifikasi" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="h-6 w-px bg-outline-variant/40 mx-1"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Interactive Script to Ensure Active Menu Synchronization in Shell Sidebar -->
+<script>
+    (function() {
+      // Highlight "Profil Sarana" nav link in shell sidebar
+      const navLinks = document.querySelectorAll('aside nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'profil-sarana') {
+          link.className = 'flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary-container font-label-md transition-all shadow-sm';
+        } else {
+          link.className = 'flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all';
+        }
+      });
+    })();
+  </script>
+<!-- Page Breadcrumb & Header Meta -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-on-surface-variant">Layanan Terpadu</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-on-surface-variant">Portal Pelaku Usaha</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-primary font-semibold">Dossier Profil Sarana</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[11px] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">verified_user</span>
+        Terintegrasi OSS RBA &amp; SIMWAS POM
+      </span>
+<span class="text-outline-variant hidden sm:inline">|</span>
+<span class="font-label-sm text-on-surface-variant text-[11px]">ID Sarana: <strong class="text-on-surface">PLK-PR-2024-0082</strong></span>
+</div>
+</div>
+<!-- Primary Header Dossier Card -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg mb-space-lg relative overflow-hidden">
+<!-- Subtle River Wave Linework Pattern -->
+<div class="absolute right-0 top-0 bottom-0 w-96 pointer-events-none opacity-40 overflow-hidden hidden xl:block">
+<svg class="h-full w-full" fill="none" preserveaspectratio="none" viewbox="0 0 400 200">
+<path d="M0 160 C 100 130, 200 180, 400 140 L 400 200 L 0 200 Z" fill="#97e8c5" fill-opacity="0.15"></path>
+<path d="M0 80 C 120 40, 240 120, 400 70 L 400 200 L 0 200 Z" fill="#0f6b4f" fill-opacity="0.05"></path>
+</svg>
+</div>
+<div class="relative z-10 flex flex-col xl:flex-row xl:items-start justify-between gap-space-lg">
+<div class="flex flex-col md:flex-row gap-space-md items-start">
+<!-- Logo / Brand Identifier Badge -->
+<div class="w-20 h-20 md:w-24 md:h-24 rounded-xl bg-primary-container/10 flex items-center justify-center shrink-0 shadow-inner">
+<div class="w-16 h-16 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-3xl">set_meal</span>
+</div>
+</div>
+<!-- Facility Metadata Details -->
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2 mb-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] font-semibold">
+              Produksi (CPPOB Olahan Ikan)
+            </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px]">
+              UMKM Pangan Lokal Binaan
+            </span>
+<span class="px-3 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] flex items-center gap-1.5 font-bold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              Memenuhi Syarat (MS) - Grade A
+            </span>
+</div>
+<h1 class="font-headline-xl text-on-surface tracking-tight mb-1">
+            UD. Berkah Mandiri Patin Kahayan
+          </h1>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-4 text-on-surface-variant font-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">category</span>
+              Komoditas: <strong class="text-on-surface font-medium">Produk Perikanan &amp; Ikan Salai / Asap Olahan Patin</strong>
+</span>
+<span class="hidden sm:inline text-outline-variant">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">badge</span>
+              Pimpinan / Pemilik: <strong class="text-on-surface font-medium">Hj. Rusmini</strong>
+</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0 self-start">
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary font-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_calendar</span>
+<span>Minta Pembaruan Data ke Balai</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Cetak Profil Ringkas (.PDF)</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Read-Only Notice Banner -->
+<div class="rounded-xl bg-surface-container-low p-space-md mb-space-lg flex items-start gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center gap-2">
+<h4 class="font-title-sm text-on-surface font-bold">Catatan Integritas Data &amp; Kepatuhan Regulasi</h4>
+<span class="px-2 py-0.2 rounded bg-surface-container-high text-[10px] font-label-sm text-on-surface-variant">Read-Only Mode</span>
+</div>
+<p class="font-body-sm text-on-surface-variant mt-0.5 leading-relaxed">
+        Data profil sarana bersifat <span class="font-semibold text-on-surface">read-only</span> dan dikelola langsung oleh <strong>Balai Besar POM di Palangka Raya</strong> berdasarkan sinkronisasi data perizinan OSS RBA &amp; Berita Acara Pemeriksaan (BAP). Untuk permohonan pembaruan alamat fasilitas, penanggung jawab teknis, atau penambahan lini produk, silakan ajukan permohonan perubahan data sarana atau hubungi Layanan Pembina BBPOM Palangka Raya.
+      </p>
+</div>
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors shrink-0" title="Informasi Kebijakan" type="button">
+<span class="material-symbols-outlined text-[18px]">info</span>
+</button>
+</div>
+<!-- Main Grid: 2 Columns Layout (8 cols Content + 4 cols Lateral Sidebar) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column (Dossier Cards: 8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Card 1: Legalitas & Perizinan Berusaha -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex items-center justify-between mb-space-md pb-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+<div>
+<h2 class="font-headline-md text-on-surface font-bold">Informasi Legalitas &amp; Perizinan Berusaha</h2>
+<p class="font-label-sm text-on-surface-variant">Dokumen izin resmi berbadan hukum dan sertifikasi CPPOB</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] font-semibold">
+            Status Izin: Valid
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- NIB -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Nomor Induk Berusaha (NIB)</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-headline-md text-on-surface font-semibold tracking-wide">9120004819284</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed text-[10px] font-semibold">OSS RBA</span>
+</div>
+<span class="font-label-sm text-secondary text-[11px] mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+              Terverifikasi Kementerian Investasi / BKPM
+            </span>
+</div>
+<!-- NPWP -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Nomor Pokok Wajib Pajak (NPWP)</span>
+<span class="font-headline-md text-on-surface font-semibold tracking-wide mt-1">08.492.103.4-711.000</span>
+<span class="font-label-sm text-on-surface-variant text-[11px] mt-1">KPP Pratama Palangka Raya</span>
+</div>
+<!-- Nomor Sertifikat CPPOB -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Nomor Izin Penerapan CPPOB</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-title-sm text-on-surface font-semibold">IP-CPPOB/PLK/2024/0082</span>
+</div>
+<span class="font-label-sm text-on-surface-variant text-[11px] mt-1">Diterbitkan oleh Direktur Pengawasan Pangan Olahan</span>
+</div>
+<!-- Masa Berlaku -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col justify-between">
+<span class="font-label-sm text-on-surface-variant">Masa Berlaku Sertifikat CPPOB</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-body-md text-on-surface font-semibold">s/d 14 November 2028</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] font-bold">
+                Aktif 3 Tahun Lagi
+              </span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 mt-2 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 72%"></div>
+</div>
+</div>
+</div>
+<!-- NIE Products Registered Section -->
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+              Nomor Izin Edar (NIE) Terdaftar (2 Produk Aktif)
+            </span>
+<span class="font-label-sm text-secondary font-medium">BPOM RI MD</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm mt-1">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-start gap-3 shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-on-surface font-semibold truncate">Patin Salai Asap Bumbu Rempah</span>
+<span class="font-label-sm text-primary font-bold text-[11px]">BPOM RI MD 243214001012</span>
+<span class="font-label-sm text-on-surface-variant text-[11px]">Kemasan Aluminium Pouch 250g</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-start gap-3 shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-on-surface font-semibold truncate">Abon Ikan Patin Pedas Gurih</span>
+<span class="font-label-sm text-primary font-bold text-[11px]">BPOM RI MD 243214002012</span>
+<span class="font-label-sm text-on-surface-variant text-[11px]">Kemasan Jar Plastik Kedap Udara 100g</span>
+</div>
+</div>
+</div>
+<!-- KBLI Classification -->
+<div class="mt-2 pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-[12px] text-on-surface-variant">
+<span>Klasifikasi Risiko Usaha: <strong class="text-on-surface font-semibold">Risiko Menengah Tinggi</strong></span>
+<span>KBLI 10212 - Industri Pengasapan/Pemanggangan Ikan</span>
+</div>
+</div>
+</article>
+<!-- Card 2: Kontak & Person In Charge (PIC) -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex items-center gap-space-sm mb-space-md pb-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">contact_phone</span>
+</div>
+<div>
+<h2 class="font-headline-md text-on-surface font-bold">Kontak &amp; Person In Charge (PIC)</h2>
+<p class="font-label-sm text-on-surface-variant">Penanggung jawab operasional, teknis mutu, dan kanal resmi</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Telepon Kantor -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Telepon Rumah Produksi</span>
+<span class="font-title-sm text-on-surface font-bold mt-1">(0536) 3224819</span>
+<span class="font-label-sm text-on-surface-variant text-[11px] mt-0.5">Operasional 08.00 - 16.00 WIB</span>
+</div>
+<!-- WhatsApp Resmi -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-on-surface-variant">WhatsApp Notifikasi Sarana</span>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="font-title-sm text-on-surface font-bold">0812-5099-2811</span>
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+</div>
+<span class="font-label-sm text-secondary text-[11px] mt-0.5">Terhubung Notifikasi BBPOM</span>
+</div>
+<!-- Email Sarana -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Email Korespondensi Resmi</span>
+<span class="font-body-sm text-on-surface font-semibold truncate mt-1">berkah.patinkahayan@gmail.com</span>
+<span class="font-label-sm text-on-surface-variant text-[11px] mt-0.5">Tervalidasi di OSS RBA</span>
+</div>
+</div>
+<!-- PIC Badges Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-md">
+<!-- PIC Teknis Mutu -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 font-bold font-headline-md">
+              MU
+            </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Penanggung Jawab Teknis Mutu (PJTM)</span>
+<h5 class="font-title-sm text-on-surface font-bold">Maria Ulfah, S.Pi</h5>
+<div class="flex items-center gap-1 mt-1 text-[11px] text-secondary font-semibold">
+<span class="material-symbols-outlined text-[14px]">school</span>
+                Pelatihan CPPOB 2025 Tersertifikasi Balai
+              </div>
+</div>
+</div>
+<!-- Kontak Darurat Penarikan Produk -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-3">
+<div class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0 font-bold font-headline-md">
+<span class="material-symbols-outlined text-[22px]">ring_volume</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Kontak Darurat Penarikan Produk (Recall)</span>
+<h5 class="font-title-sm text-on-surface font-bold">Hj. Rusmini (Pimpinan)</h5>
+<div class="flex items-center gap-1 mt-1 text-[11px] text-error font-semibold">
+<span class="material-symbols-outlined text-[14px]">phone_in_talk</span>
+                0811-5201-998 (Siaga 24 Jam)
+              </div>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3: Lokasi & Alamat Fasilitas Sarana (With Visual Map Placeholder) -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex items-center justify-between mb-space-md pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div>
+<h2 class="font-headline-md text-on-surface font-bold">Lokasi &amp; Fasilitas Sarana Produksi</h2>
+<p class="font-label-sm text-on-surface-variant">Titik koordinat geospasial dan zonasi pemrosesan higienis</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">
+            Wilayah Kerja Kota Palangka Raya
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-stretch">
+<!-- Text Address Details (7 Cols) -->
+<div class="md:col-span-7 flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-on-surface-variant">Alamat Lengkap Fasilitas</span>
+<p class="font-body-md text-on-surface font-medium leading-relaxed">
+                Jl. RTA Milono Km. 4.5, RT 03 / RW 08, Kelurahan Menteng, Kecamatan Jekan Raya, Kota Palangka Raya, Kalimantan Tengah 73111
+              </p>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Koordinat GPS Terdaftar</span>
+<span class="font-body-sm text-on-surface font-bold mt-1 font-mono">-2.235942, 113.914281</span>
+<span class="font-label-sm text-secondary text-[11px] mt-0.5">Sesuai Verifikasi BAP</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-on-surface-variant">Luas Area Produksi</span>
+<span class="font-body-sm text-on-surface font-bold mt-1">420 m²</span>
+<span class="font-label-sm text-on-surface-variant text-[11px] mt-0.5">Milik Sendiri (Permanen)</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-on-surface-variant">Pembagian Tata Letak (Lay-out) CPPOB:</span>
+<div class="flex flex-wrap gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-[11px]">Zona Bersih (Pengemasan)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-[11px]">Zona Antara (Pengasapan/Salai)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-[11px]">Gudang Suhu Dingin (Cold Storage)</span>
+</div>
+</div>
+</div>
+<!-- Visual Map Card Placeholder (5 Cols) -->
+<div class="md:col-span-5 relative rounded-xl overflow-hidden bg-surface-container-high min-h-[220px] flex flex-col justify-between p-3 group shadow-inner" data-location="Jalan RTA Milono Km 4.5 Palangka Raya Kalimantan Tengah" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBW-JLgiVfwnxQzpnDPUhRDCFZLdfCgFPM0wfXCOxLXLVPA-avKoOhvWETA9dCYesg6efzsAUduJDTgwZGt8WA3oWlz2mpwZjt6_2pr3Wt3LmHT2CTZtnxoV-drSakQSQX_dqrUfB_7xuPWiHGxKNHtHR2xPWC4O33rJIKPi3iNCoOdEU4mntDwhBgsGOGlwQxCdQJRFpDIFVlw53oH2kAEuquGBdH5PtbhAjQblcebKkzZT_VpF47v0w')">
+<!-- Map Top Overlay UI Controls -->
+<div class="relative z-10 flex items-center justify-between w-full">
+<div class="flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-[11px] text-on-surface font-bold">Peta Lokasi Fasilitas</span>
+</div>
+<div class="flex gap-1 bg-surface-container-lowest/90 backdrop-blur-md p-0.5 rounded-md shadow-sm">
+<button class="px-2 py-0.5 rounded text-[10px] font-label-sm bg-primary text-on-primary" type="button">Peta</button>
+<button class="px-2 py-0.5 rounded text-[10px] font-label-sm text-on-surface-variant hover:text-on-surface" type="button">Satelit</button>
+</div>
+</div>
+<!-- Central Pin Marker Display -->
+<div class="relative z-10 self-center my-auto flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg transform -translate-y-2 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">factory</span>
+</div>
+<div class="px-2 py-0.5 rounded-md bg-inverse-surface text-inverse-on-surface font-label-sm text-[10px] shadow-md -mt-1">
+                UD. Berkah Mandiri Patin
+              </div>
+</div>
+<!-- Map Bottom Coordinate Bar -->
+<div class="relative z-10 bg-surface-container-lowest/95 backdrop-blur-md p-2 rounded-lg flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-1 text-[11px] text-on-surface font-mono">
+<span class="material-symbols-outlined text-primary text-[14px]">pin_drop</span>
+                -2.235942, 113.914281
+              </div>
+<a class="text-[10px] font-label-sm text-secondary hover:underline flex items-center gap-0.5" href="https://maps.google.com" target="_blank">
+                Buka Peta <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 4: Riwayat Inspeksi & Catatan Pengawasan BBPOM Palangka Raya -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex items-center justify-between mb-space-md pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">history_edu</span>
+</div>
+<div>
+<h2 class="font-headline-md text-on-surface font-bold">Riwayat Pengawasan &amp; Siklus Audit Balai</h2>
+<p class="font-label-sm text-on-surface-variant">Rekam jejak kepatuhan pemeriksaan sarana oleh BBPOM di Palangka Raya</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-semibold">
+            Frekuensi: 1x Per Semester
+          </span>
+</div>
+<!-- Latest Inspection Highlight Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low mb-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-3">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-[11px] font-bold">Siklus II Tahun 2026</span>
+<span class="font-label-sm text-on-surface-variant">Tanggal Audit: <strong class="text-on-surface">12 September 2026</strong></span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-[11px] text-tertiary">
+<span class="material-symbols-outlined text-[16px] text-tertiary">pending_actions</span>
+<span>Sedang Proses Verifikasi CAPA Ronde 2</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm mb-3">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-on-surface-variant text-[11px]">Tim Petugas Pemeriksa BBPOM:</span>
+<p class="font-title-sm text-on-surface font-semibold mt-0.5">Ir. Hendra S., S.Si., Apt. &amp; Nurlaila, S.Si.</p>
+<span class="text-[10px] text-on-surface-variant">Poksi Pemeriksaan Sarana Distribusi &amp; Produksi</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-on-surface-variant text-[11px]">Hasil Evaluasi Temuan:</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-[11px] font-bold">2 Temuan Mayor</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[11px] font-bold">1 Temuan Minor</span>
+</div>
+<span class="text-[10px] text-secondary font-medium">Dokumen perbaikan telah diunggah di modul CAPA</span>
+</div>
+</div>
+<!-- Closed Previous Record Notice -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">task_alt</span>
+<div class="flex flex-col truncate">
+<span class="font-label-sm text-on-surface font-semibold truncate">Status Closed CAPA Siklus I (Februari 2026)</span>
+<span class="text-[11px] text-on-surface-variant truncate">Berdasarkan Surat Rekomendasi No: B-WAS.02.04.11A.09.26.1402</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-[10px] font-bold shrink-0">
+              Status Closed
+            </span>
+</div>
+</div>
+<!-- Inline Visual Mini Bar Chart: Riwayat Nilai Pemeriksaan -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-on-surface font-semibold">Tren Nilai Kepatuhan CPPOB (3 Siklus Terakhir)</span>
+<span class="font-label-sm text-primary font-bold">Rata-rata: 92.4% (Grade A)</span>
+</div>
+<div class="flex items-end gap-3 h-16 pt-2 px-2">
+<!-- Siklus 1 -->
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-surface-container-high rounded-t flex items-end justify-center h-12 overflow-hidden">
+<div class="w-full bg-primary/70 h-[88%] rounded-t flex items-center justify-center text-on-primary text-[9px] font-bold">88%</div>
+</div>
+<span class="text-[10px] text-on-surface-variant font-label-sm">Sem II 2025</span>
+</div>
+<!-- Siklus 2 -->
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-surface-container-high rounded-t flex items-end justify-center h-12 overflow-hidden">
+<div class="w-full bg-primary/85 h-[94%] rounded-t flex items-center justify-center text-on-primary text-[9px] font-bold">94%</div>
+</div>
+<span class="text-[10px] text-on-surface-variant font-label-sm">Sem I 2026</span>
+</div>
+<!-- Siklus 3 -->
+<div class="flex-1 flex flex-col items-center gap-1">
+<div class="w-full bg-surface-container-high rounded-t flex items-end justify-center h-12 overflow-hidden">
+<div class="w-full bg-primary h-[95%] rounded-t flex items-center justify-center text-on-primary text-[9px] font-bold">95.2%</div>
+</div>
+<span class="text-[10px] text-on-surface font-bold font-label-sm">Sem II 2026</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Right Column: Connected Accounts & Technical Facilitator (4 Cols) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Card A: Akun Terhubung (Akses Portal Sarana) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">manage_accounts</span>
+<h3 class="font-title-sm text-on-surface font-bold">Akun Terhubung</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] font-bold">
+            2 User Aktif
+          </span>
+</div>
+<p class="font-label-sm text-on-surface-variant text-[11px] mb-3">
+          Daftar staf yang memiliki hak akses legal untuk mengunggah dokumen CAPA dan merespons audit.
+        </p>
+<div class="flex flex-col gap-space-sm">
+<!-- User 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[12px]">
+                  HR
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface font-bold leading-tight">Hj. Rusmini</span>
+<span class="text-[11px] text-on-surface-variant">Pimpinan / Super Admin</span>
+</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed text-[10px] font-bold">Aktif</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-1">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Login terakhir: Hari ini, 09:15 WIB
+              </span>
+</div>
+</div>
+<!-- User 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-[12px]">
+                  MU
+                </div>
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface font-bold leading-tight">Maria Ulfah, S.Pi</span>
+<span class="text-[11px] text-on-surface-variant">Staff Kendali Mutu / PJTM</span>
+</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed text-[10px] font-bold">Aktif</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-1">
+<span>Izin: Kirim Tindakan CAPA &amp; Lab</span>
+</div>
+</div>
+</div>
+<!-- Security Footer Tag -->
+<div class="mt-space-sm pt-space-xs flex items-center gap-1.5 text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-primary">security</span>
+<span>Terproteksi 2FA &amp; Enkripsi Portal BBPOM</span>
+</div>
+</div>
+<!-- Card B: Pembina Teknis BBPOM (ULPK Terdaftar) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full pointer-events-none"></div>
+<div class="flex items-center gap-2 pb-space-sm mb-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">support_agent</span>
+<h3 class="font-title-sm text-on-surface font-bold">Pembina Teknis BBPOM</h3>
+</div>
+<div class="flex items-start gap-space-sm mb-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high overflow-hidden shrink-0 flex items-center justify-center text-primary shadow-sm">
+<!-- Portrait Placeholder of Inspector -->
+<img class="w-full h-full object-cover" data-alt="Close-up professional portrait of Dr. Ratna Kusumastuti, female Indonesian food safety specialist from BBPOM Palangka Raya wearing standard government uniform and hijab, warm confident smile, daylight office setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASciu0p1McM0CZRvJDIDLKi098wm1sZw-V2p-O9XHHeAcvCSeHwj1A7M9ZRM348WhYtBOfriZQsF1rlO5j03f08cYmsoH9jV-9S2siEOv22DxsJ6QyjLVYuABMTPqfhA2UGTrjQ6hMhQenmt__g6Xiwe4fcwtyfPPswPvVJPgxQc-_v6MavQDOnuCO2-gNu7Ulun7EcfYygcsrIhkYTBXRrvIjtUYKMuSkhfxZDAXez642ilrjYrzIww"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface font-bold">Dr. Ratna Kusumastuti, M.Sc</span>
+<span class="text-[11px] text-primary font-semibold">Pengawas Farmasi &amp; Makanan (PFM) Ahli Muda</span>
+<span class="text-[10px] text-on-surface-variant mt-0.5">Poksi Pemeriksaan &amp; Sertifikasi BBPOM Palangka Raya</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low mb-space-sm text-[11px] text-on-surface-variant leading-relaxed">
+          Petugas pendamping resmi untuk konsultasi standar sanitasi, cara produksi higienis, dan verifikasi dokumen CAPA.
+        </div>
+<div class="flex flex-col gap-2">
+<a class="w-full py-2 px-3 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-center text-xs flex items-center justify-center gap-1.5 transition-all shadow-sm" href="https://wa.me/6281200000000" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Chat Konsultasi WhatsApp</span>
+</a>
+<button class="w-full py-2 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary font-label-md text-center text-xs flex items-center justify-center gap-1.5 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+<span>Kirim Tiket Perubahan Data</span>
+</button>
+</div>
+</div>
+<!-- Card C: Unduh Salinan Profil & Riwayat Legalitas -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md">
+<div class="flex items-center gap-2 pb-space-sm mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">download_for_offline</span>
+<h3 class="font-title-sm text-on-surface font-bold">Unduh Arsip &amp; Dokumen</h3>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Document Link 1 -->
+<a class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center justify-between transition-colors group" href="#">
+<div class="flex items-center gap-2.5 truncate">
+<span class="material-symbols-outlined text-primary text-[20px] group-hover:scale-110 transition-transform">description</span>
+<div class="flex flex-col truncate">
+<span class="font-label-md text-on-surface text-xs font-semibold truncate">Lembar Profil Lengkap Sarana</span>
+<span class="text-[10px] text-on-surface-variant">PDF • 1.4 MB (Tervalidasi QR BBPOM)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary text-[18px]">download</span>
+</a>
+<!-- Document Link 2 -->
+<a class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center justify-between transition-colors group" href="#">
+<div class="flex items-center gap-2.5 truncate">
+<span class="material-symbols-outlined text-primary text-[20px] group-hover:scale-110 transition-transform">verified</span>
+<div class="flex flex-col truncate">
+<span class="font-label-md text-on-surface text-xs font-semibold truncate">Sertifikat Komitmen CPPOB</span>
+<span class="text-[10px] text-on-surface-variant">PDF • 820 KB (Masa Berlaku s/d 2028)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary text-[18px]">download</span>
+</a>
+</div>
+<!-- Help Link -->
+<div class="mt-space-sm pt-space-xs text-center">
+<span class="text-[11px] text-on-surface-variant">Butuh legalisir fisik atau surat keterangan? <a class="text-secondary font-semibold hover:underline" href="#">Hubungi Layanan ULPK</a></span>
+</div>
+</div>
+</aside>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-surface":"#213145","on-error-container":"#93000a","surface-variant":"#d3e4fe","on-primary-fixed":"#002115","primary-fixed-dim":"#86d6b4","inverse-on-surface":"#eaf1ff","tertiary":"#623f00","on-tertiary-fixed":"#291800","on-background":"#0b1c30","on-surface-variant":"#3f4944","surface-container-lowest":"#ffffff","secondary-container":"#8ff3f2","on-surface":"#0b1c30","surface-container-low":"#eff4ff","tertiary-fixed-dim":"#ffb955","on-primary-container":"#97e8c5","background":"#f8f9ff","surface-dim":"#cbdbf5","on-secondary-fixed":"#002020","primary-container":"#0f6b4f","primary":"#00513a","on-primary-fixed-variant":"#00513a","surface-tint":"#106b4f","tertiary-container":"#825400","inverse-primary":"#86d6b4","on-primary":"#ffffff","outline":"#6f7a73","on-tertiary-fixed-variant":"#633f00","surface-container-highest":"#d3e4fe","surface-bright":"#f8f9ff","error-container":"#ffdad6","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#004f50","secondary-fixed":"#8ff3f2","on-secondary":"#ffffff","surface-container-high":"#dce9ff","secondary-fixed-dim":"#72d6d6","on-tertiary-container":"#ffcf92","surface":"#f8f9ff","on-secondary-container":"#007070","primary-fixed":"#a1f3cf","surface-container":"#e5eeff","secondary":"#006a6a","on-error":"#ffffff","tertiary-fixed":"#ffddb4","error":"#ba1a1a","outline-variant":"#bec9c2"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","gutter":"1.5rem","margin-mobile":"1rem","space-md":"1rem","margin":"2rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-lg":"1.5rem"},"fontFamily":{"label-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-xl":["Plus Jakarta Sans"],"title-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"label-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"600"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-xl":["2rem",{"lineHeight":"2.5rem","fontWeight":"700"}],"title-sm":["1rem",{"lineHeight":"1.5rem","fontWeight":"600"}],"display-lg-mobile":["2.25rem",{"lineHeight":"2.75rem","fontWeight":"700"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1rem","fontWeight":"600"}],"display-lg":["3rem",{"lineHeight":"3.5rem","fontWeight":"700"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Brand logo. - Primary color: #0f6b4f - Font: plusJakartaSans - Mode: light - Roundness: rounded-md" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XmEAYYP_2FYkFtafVIdCsgduAG_nRNtBHQ_u0gdqdUNpQnZAUDNUV8YbeqTMo7AYkl50QL3IrUt-uw42JcwIeLcTRcFDemgtm0bIhyTc1-GtzDPvaUW9heXqga3ARG9V4v3aeFuqUuJOKtGV-llL5rzmSuPo3aX5ledIfILCulL67JbAmtfXAualW8DWrAeFMF51G036IHlZy6nDSfAASDZXxMdKqqSiMqRKbgmIivTji2xhUZj7C2mXmL"/><div class="flex flex-col"><span class="font-headline-md text-primary leading-tight font-bold tracking-tight">Si Kahayan</span><span class="font-label-sm text-on-surface-variant leading-none">BBPOM di Palangka Raya</span></div></div><div class="px-space-md py-space-sm"><div class="p-space-sm bg-surface-container-low rounded-lg"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-on-surface">Portal Pelaku Usaha</span></div><p class="font-label-sm text-on-surface-variant truncate mt-0.5">Sentra Layanan Pengawasan &amp; CAPA</p></div></div><nav class="flex flex-col gap-1 px-space-md mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-label-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="pemeriksaan-sarana" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-label-md">Pemeriksaan Sarana</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="temuan-dan-capa" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">assignment_late</span><span class="font-label-md">Temuan &amp; CAPA</span></div><span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[11px]">2</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dokumen" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span class="font-label-md">Dokumen</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="riwayat" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span class="font-label-md">Riwayat</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="profil-sarana" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-label-md">Profil Sarana</span></a></nav></div><div class="p-space-md bg-surface-container-lowest flex flex-col gap-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-label-sm text-on-surface-variant">Status Izin CPPOB</span><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm">Aktif (MS)</span></div><p class="font-label-sm text-on-surface font-semibold truncate">UD. Berkah Mandiri Patin</p></div><div class="flex items-center justify-between pt-space-xs"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-label-sm text-on-surface font-semibold truncate max-w-[110px]">Hj. Rusmini</span><span class="font-label-sm text-on-surface-variant text-[11px]">Penanggung Jawab</span></div></div><a class="p-2 text-on-surface-variant hover:text-error hover:bg-error-container/40 rounded-lg transition-colors" data-path="login" href="#" title="Keluar / Logout"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center gap-space-xs px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface cursor-pointer hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-primary text-[18px]">domain</span><div class="flex flex-col text-left"><span class="font-label-sm text-on-surface truncate max-w-[220px]">UD. Berkah Mandiri Patin</span><span class="text-[10px] text-on-surface-variant leading-none">CPPOB Produsen • Palangka Raya</span></div><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></div><div class="relative flex-1 hidden md:block"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-3 py-1.5 rounded-lg bg-surface-container-low font-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary transition-all" placeholder="Cari nomor permohonan, CAPA, surat tugas..." type="text"/></div></div><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm"><span class="w-2 h-2 rounded-full bg-primary"></span><span>BBPOM Siap Melayani</span></div><button class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Bantuan &amp; Regulasi" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><button class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Notifikasi" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="h-6 w-px bg-outline-variant/40 mx-1"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- BREADCRUMB & HEADER -->
+<div class="flex flex-col gap-space-sm mb-space-lg">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-space-xs font-label-sm text-on-surface-variant flex-wrap">
+<span class="hover:text-primary transition-colors cursor-pointer">Portal Pelaku Usaha</span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Temuan &amp; CAPA</span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<span class="font-semibold text-on-surface">BA-09/2026/PLK-POM</span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<span class="text-primary font-semibold">Detail Temuan &amp; Form Tindak Lanjut CAPA</span>
+</nav>
+<!-- Header & Action Row -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-start gap-space-md">
+<a class="p-2 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all flex items-center justify-center mt-1" href="#" title="Kembali ke Daftar Temuan">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</a>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Tindak Lanjut &amp; Pengajuan Bukti CAPA</h1>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-sm">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+              Perlu Tindak Lanjut (Ronde 2) • Terlambat 2 Hari
+            </span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-sm mt-1 flex-wrap">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">description</span>
+              No. BAP: <strong class="text-on-surface">BA-09/2026/PLK-POM</strong>
+</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">event_repeat</span>
+              Siklus Audit Rutin Semester II (12 September 2026)
+            </span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1 text-error font-medium">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+              Batas Akhir Regulasi: 12 Oktober 2026
+            </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md shadow-sm hover:bg-surface-container transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          Unduh BAP Resmi (PDF)
+        </button>
+</div>
+</div>
+</div>
+<!-- MAIN 2-COLUMN LAYOUT -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: 65% (8/12 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- CARD A: RINGKASAN TEMUAN PENGAWASAN -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Colored top accent band -->
+<div class="h-1.5 w-full bg-error"></div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-md flex-wrap">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-error-container/60 text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">warning</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-error text-on-error font-label-sm uppercase tracking-wide">Temuan Mayor</span>
+<span class="font-label-sm text-on-surface-variant">Kategori: Kontaminasi Silang</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-0.5">Klausul 4.2: Sarana Higiene &amp; Sanitasi Karyawan</h2>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-sm text-on-surface">Standar CPPOB 2026</span>
+</div>
+<!-- Description Box -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<span class="font-label-sm uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">fact_check</span>
+              Uraian Ketidaksesuaian oleh Petugas BBPOM
+            </span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              Fasilitas tempat cuci tangan pada ruang pengeringan produk fillet patin belum dilengkapi dengan pengering tangan otomatis/tisu sekali pakai dan sabun cair antiseptik. Ditemukan karyawan mengeringkan tangan menggunakan lap kain bersama yang berpotensi memicu kontaminasi silang mikrobiologi pada produk pangan olahan.
+            </p>
+</div>
+<!-- Recommendation Box -->
+<div class="bg-primary/5 p-space-md rounded-lg flex flex-col gap-space-xs">
+<span class="font-label-sm uppercase tracking-wider text-primary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+              Rekomendasi Tindakan Koreksi Standar BPOM
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+              Sediakan dispenser sabun cuci tangan cair antibakteri, pasang hand dryer otomatis atau dispenser tisu sekali pakai dengan tempat sampah tertutup berpedal injak, serta terbitkan SOP tata cara mencuci tangan dan pemantauan harian sanitasi higiene karyawan.
+            </p>
+</div>
+<!-- Inspection Photo Evidence Thumbnails -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-on-surface-variant">Bukti Temuan Petugas Lapangan (Hasil BAP Lapangan):</span>
+<span class="font-label-sm text-primary">2 Foto Terlampir</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Evidence 1 -->
+<div class="group relative rounded-lg overflow-hidden bg-surface-container shadow-sm flex flex-col">
+<div class="relative h-44 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Inspection photo inside a fish processing facility showing a stainless steel sink without soap dispensers or drying paper towel, with audit measuring tape and clean white tiled wall under institutional clinical lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDliWRjmWQ5otGABRQfKQFZxhyIql-Zy0EuoAL3ahhqr534SbbMr2cFqUd06fRGr6M8TDM7GjQu9PHG6HoV1iLPSVJXbQyW6xmSiipNM1nWOEow-h242l-JDNbXMmMi1eiUbEfkiXM61bdCYmx-JO2ytcr1_pja6H1fzvIGCJeJG7Lc0xlGj9T0uzUJC6JHELxmzW6kQi5h5ay5qAe8ATb2OjSJEALEpPEsvwC2OSP61ODUmgK2lAu6hA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<!-- Watermark / Timestamp Stamp -->
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between text-surface-container-lowest font-label-sm text-[11px]">
+<span class="bg-on-surface/70 px-2 py-0.5 rounded backdrop-blur-sm">BBPOM Palangka Raya • 12/09/26</span>
+<span class="bg-error/80 px-2 py-0.5 rounded backdrop-blur-sm">Temuan #1</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-lowest flex flex-col">
+<span class="font-label-md text-on-surface">Foto Temuan Lapangan #1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Wastafel tanpa sabun cair &amp; pengering higienis</span>
+</div>
+</div>
+<!-- Evidence 2 -->
+<div class="group relative rounded-lg overflow-hidden bg-surface-container shadow-sm flex flex-col">
+<div class="relative h-44 w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Close up inspection photograph showing a damp communal fabric wiping cloth hung on a metal rack near the fillet drying tables in fish production room, documentary forensic lighting style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_haZwkvKpljMYir3GCm3QYKLFOJCQKltCYu9kDVHk6H9YDWRAGhIUz6lLoCr5cCQTGLigQfvj79PXUcdmq1FUdjsKybGFfudJPiyXJeHnibuaLCse4jfb3wg6Yyqr8dH2WYG-kqUWn32BCvTFePhXBYTrhxqU6ULI4d8mUZdf48ZPJKMBBd6xDcnya6U4-_P8AkPMxW2EqLcH96i1BYSnIO-W_nsRYDcg22ATbZxNY6JWM1cbfGwj8A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<!-- Watermark / Timestamp Stamp -->
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between text-surface-container-lowest font-label-sm text-[11px]">
+<span class="bg-on-surface/70 px-2 py-0.5 rounded backdrop-blur-sm">BBPOM Palangka Raya • 12/09/26</span>
+<span class="bg-error/80 px-2 py-0.5 rounded backdrop-blur-sm">Temuan #2</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-lowest flex flex-col">
+<span class="font-label-md text-on-surface">Foto Temuan Lapangan #2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Lap kain basah bersama di area pengeringan</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CARD B: RIWAYAT EVALUASI RONDE 1 (REVISI/DITOLAK) -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">reply_all</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Catatan Evaluator BBPOM • Ronde 1</h3>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm">Perlu Revisi</span>
+</div>
+<span class="font-label-sm text-on-surface-variant">Ditinjau pada: 25 September 2026</span>
+</div>
+<p class="font-label-sm text-on-surface-variant mt-0.5">
+              Evaluator: <strong>Ir. Hendra S., S.Si., Apt.</strong> (PFM Ahli Madya – Subtim Penilaian Sarana Pangan)
+            </p>
+</div>
+</div>
+<!-- Note quote box -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">rate_review</span>
+            Catatan Resmi Ketidaksesuaian Dokumen Ronde 1:
+          </div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+            “Bukti foto wastafel yang dilampirkan pada Ronde 1 belum menunjukkan adanya wadah sampah tertutup berpedal serta belum menyertakan bukti pembaruan formulir checklist logbook pembersihan harian yang telah ditandatangani penanggung jawab teknis. Harap lengkapi pada Ronde 2 agar dapat disetujui.”
+          </p>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+<span>Silakan lengkapi kekurangan di atas melalui formulir CAPA Ronde 2 di bawah ini.</span>
+</div>
+</section>
+<!-- CARD C: FORMULIR PENGAJUAN CAPA RONDE 2 -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-lg">
+<div class="flex items-center justify-between flex-wrap gap-2 pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">edit_document</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Formulir Tindakan Koreksi &amp; Pencegahan (CAPA)</h2>
+<span class="font-label-sm text-on-surface-variant">Pengajuan Ulang • Ronde 2 (Koreksi + Bukti Komprehensif)</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-on-surface">Format Standar BPOM F-CAPA-02</span>
+</div>
+<form class="flex flex-col gap-space-lg" onsubmit="event.preventDefault();">
+<!-- FIELD 1: Tindakan Perbaikan Langsung (Correction) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1.5" for="koreksi-langsung">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                1. Tindakan Koreksi Langsung (Correction)
+                <span class="text-error font-bold">*</span>
+</label>
+<span class="font-label-sm text-on-surface-variant">Tindakan Fisik Segera</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Jelaskan tindakan konkret yang telah dilakukan untuk melenyapkan ketidaksesuaian fisik yang ditemukan petugas di area sarana.</p>
+<textarea class="w-full p-space-md rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner transition-all resize-y" id="koreksi-langsung" rows="4">Telah dipasang 1 unit hand dryer otomatis merek Krisbow di samping wastafel ruang pengeringan, 1 dispenser sabun cair antiseptik antibakteri, serta 1 unit tempat sampah injak stainless steel bertutup. Lap kain bersama telah disingkirkan dari seluruh ruang produksi dan diganti lap microfiber bertanda warna sesuai zona zonasi.</textarea>
+<div class="flex justify-between font-label-sm text-on-surface-variant text-[11px] px-1">
+<span>Status: Diperbarui untuk Ronde 2</span>
+<span>238 Karakter</span>
+</div>
+</div>
+<!-- FIELD 2: Tindakan Pencegahan & Analisis Akar Masalah (5-Why) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1.5" for="pencegahan-akar">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                2. Analisis Akar Masalah &amp; Tindakan Pencegahan (Corrective &amp; Preventive Action)
+                <span class="text-error font-bold">*</span>
+</label>
+<span class="font-label-sm text-on-surface-variant">Metode 5-Why / Root Cause</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Uraikan mengapa ketidaksesuaian terjadi dan langkah manajerial/SOP agar temuan serupa tidak terulang kembali di masa depan.</p>
+<textarea class="w-full p-space-md rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner transition-all resize-y" id="pencegahan-akar" rows="4">Akar masalah: Belum adanya petugas khusus yang ditunjuk untuk memeriksa ketersediaan sarana sanitasi setiap pagi sebelum operasional berjalan. Tindakan pencegahan: Menetapkan PIC Harian Sanitasi (Sdri. Maria), merevisi IK-SAN-04 (Instruksi Kerja Higiene Karyawan), dan mewajibkan pengisian Checklist Sanitasi Harian sebelum briefing produksi pagi yang divalidasi langsung oleh Penanggung Jawab Teknis.</textarea>
+<div class="flex justify-between font-label-sm text-on-surface-variant text-[11px] px-1">
+<span>Kriteria: Menjelaskan akar masalah manajerial dan dokumen kendali mutu</span>
+<span>384 Karakter</span>
+</div>
+</div>
+<!-- FIELD 3: Target Penyelesaian & PIC Pelaksana -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="target-selesai">
+                Target Realisasi Efektif
+                <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">calendar_today</span>
+<input class="w-full pl-10 pr-3 py-2.5 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" id="target-selesai" type="text" value="14 Oktober 2026"/>
+</div>
+<span class="font-label-sm text-on-surface-variant text-[11px]">Sesuai kesepakatan komitmen tindak lanjut</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="pic-pelaksana">
+                Nama PIC Penanggung Jawab Pelaksana
+                <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">person_check</span>
+<input class="w-full pl-10 pr-3 py-2.5 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" id="pic-pelaksana" type="text" value="Hj. Rusmini / Maria - Supervisor Produksi"/>
+</div>
+<span class="font-label-sm text-on-surface-variant text-[11px]">Harus tercantum dalam struktur organisasi sarana</span>
+</div>
+</div>
+<!-- FIELD 4: Unggah Data Dukung & Bukti Eviden (Drag & Drop) -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                4. Lampiran Bukti Dukung (Foto Before/After &amp; Dokumen SOP)
+                <span class="text-error font-bold">*</span>
+</label>
+<span class="font-label-sm text-primary font-semibold">4 Berkas Siap Dikirim</span>
+</div>
+<!-- Modern Dropzone Container -->
+<div class="p-space-lg rounded-xl bg-surface-container-low/70 hover:bg-surface-container-low transition-colors flex flex-col items-center justify-center text-center cursor-pointer group">
+<div class="w-14 h-14 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-space-sm">
+<span class="material-symbols-outlined text-[30px]">cloud_upload</span>
+</div>
+<p class="font-label-md text-on-surface mb-1">
+                Tarik &amp; lepas foto bukti fisik atau dokumen PDF pendukung di sini, atau <span class="text-primary underline font-semibold">Klik untuk Memilih Berkas</span>
+</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">
+                Format yang didukung: <strong>JPG, PNG, PDF</strong> (Maks. 10MB per berkas). Wajib menyertakan foto <em>Before vs After</em> yang jelas dengan sudut pemotretan identik dan stempel waktu.
+              </p>
+</div>
+<!-- Uploaded Files List -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<span class="font-label-sm text-on-surface-variant">Berkas yang Siap Diajukan pada Ronde 2:</span>
+<!-- Item 1: Foto After Wastafel -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded bg-surface-container-lowest shrink-0 overflow-hidden shadow-xs flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Clear modern photograph showing newly installed electric automatic hand dryer and liquid antibacterial hand soap dispenser mounted beside stainless steel wash basin in certified food production facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZgV7fLyFcK5LqnX6Ab6W5Z4lz5WRSbxj9OuVug8h0gmoszlILjuAj3wQeCBdDurBAX78NEmW_WwjFoKDRiZ0PhdjWCJcDCApowdxMKpUBTgrbIbrAz6l9uU-G7zgmEx2ERp9vii0s9sfkhYh1dxIpQ0qq3ICOqO41P9qGWL_9nEKFeqXiz8aYdEDDGHYjODgRqWnYFoa0yqZWtPIocWPIe9l3-wQ_tlav4NskTTE1lhQnbLkTHjNgtg"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-on-surface truncate">Foto_After_Wastafel_HandDryer_Otomatis.png</span>
+<div class="flex items-center gap-2 font-label-sm text-on-surface-variant text-[11px]">
+<span>2.4 MB</span>
+<span>•</span>
+<span class="text-primary font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Bukti Foto Fisik
+                      </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] hidden sm:inline-block">Siap Unggah</span>
+<button class="p-1.5 text-on-surface-variant hover:text-error rounded transition-colors" title="Hapus berkas" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Item 2: Foto Tempat Sampah Injak -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded bg-surface-container-lowest shrink-0 overflow-hidden shadow-xs flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Clean documentary photograph of a step-pedal stainless steel waste bin with lid closed sitting properly beneath wash basin in hygienic processing room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd-S3tQrOS_l3Jm0XsPGytqxdBExERDWquPt1c4mA70pbitAtDaU5EDP6L4HNnWRNuw64VpeBRQjWmmgUvPK2qiPJBVgKsZBDOGN6txgI_6DWuryJdk8eImaSE_8EmfSl2pXuj5ShTJNeJV1ImYnL7IZkr-iNy1o4sMgwld6WxfRCX7igJ0dlLyuf7slSUjlWr002FkPX9k9RicSFiydvYHNyXtS2prQt0Ra_3yN5k6nZW7VnItGg4QQ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-on-surface truncate">Foto_TempatSampah_Injak_Dan_Sabun.png</span>
+<div class="flex items-center gap-2 font-label-sm text-on-surface-variant text-[11px]">
+<span>1.8 MB</span>
+<span>•</span>
+<span class="text-primary font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Sesuai Catatan Evaluator
+                      </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] hidden sm:inline-block">Siap Unggah</span>
+<button class="p-1.5 text-on-surface-variant hover:text-error rounded transition-colors" title="Hapus berkas" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Item 3: SOP Revisi PDF -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded bg-surface-container-lowest shrink-0 shadow-xs flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-on-surface truncate">SOP_Revisi_IK_SAN_04_Higiene_Karyawan.pdf</span>
+<div class="flex items-center gap-2 font-label-sm text-on-surface-variant text-[11px]">
+<span>1.1 MB</span>
+<span>•</span>
+<span class="text-secondary font-medium">Dokumen Manajerial Baru</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] hidden sm:inline-block">Terverifikasi</span>
+<button class="p-1.5 text-on-surface-variant hover:text-error rounded transition-colors" title="Hapus berkas" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Item 4: Lembar Checklist PDF -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded bg-surface-container-lowest shrink-0 shadow-xs flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">fact_check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-on-surface truncate">Lembar_Checklist_Harian_Sanitasi_Okt2026.pdf</span>
+<div class="flex items-center gap-2 font-label-sm text-on-surface-variant text-[11px]">
+<span>680 KB</span>
+<span>•</span>
+<span class="text-secondary font-medium">Form Logbook Tertandatangan</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] hidden sm:inline-block">Siap Unggah</span>
+<button class="p-1.5 text-on-surface-variant hover:text-error rounded transition-colors" title="Hapus berkas" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pernyataan & Tombol Aksi -->
+<div class="pt-space-md flex flex-col gap-space-md">
+<!-- Legal Checkbox -->
+<label class="flex items-start gap-3 cursor-pointer select-none p-3.5 rounded-lg bg-surface-container-low/50 hover:bg-surface-container-low transition-colors">
+<input checked="" class="mt-0.5 w-4 h-4 text-primary rounded focus:ring-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface leading-snug">
+                Saya menyatakan dengan sebenar-benarnya bahwa data dukung dan bukti perbaikan yang disampaikan di atas adalah benar dan sesuai dengan kondisi riil di sarana produksi <strong>UD. Berkah Mandiri Patin</strong> untuk dinilai oleh Tim Pengawas BBPOM di Palangka Raya.
+              </span>
+</label>
+<!-- Action Buttons Group -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<button class="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+                Simpan Sebagai Draft
+              </button>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-primary text-on-primary font-label-md shadow-md hover:bg-primary-container transition-all flex items-center justify-center gap-2 group" type="button">
+<span>Kirim Dokumen CAPA ke BBPOM</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">send</span>
+</button>
+</div>
+</div>
+</div>
+</form>
+</section>
+</div>
+<!-- RIGHT COLUMN: 35% (4/12 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- SIDEBAR A: VERTICAL STEPPER SIKLUS VERIFIKASI CAPA -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">alt_route</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Alur Verifikasi Bertingkat</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px]">7 Tahap</span>
+</div>
+<!-- Vertical Stepper List -->
+<div class="relative flex flex-col gap-space-md pl-2">
+<!-- Step 1 (Completed) -->
+<div class="relative flex items-start gap-space-md">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-xs z-10">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface">1. Temuan Dicatat dalam BAP</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">12 Sep 2026 • Selesai saat inspeksi sarana</span>
+</div>
+</div>
+<!-- Step 2 (Rejected / Evaluated) -->
+<div class="relative flex items-start gap-space-md">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0 shadow-xs z-10">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface">2. Evaluasi CAPA Ronde 1</span>
+<span class="font-body-sm text-body-sm text-error text-[12px] font-medium">25 Sep 2026 • Ditolak (Perlu Revisi)</span>
+</div>
+</div>
+<!-- Step 3 (Current Active) -->
+<div class="relative flex items-start gap-space-md">
+<div class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 shadow-xs ring-4 ring-secondary-container/40 z-10">
+<span class="w-2.5 h-2.5 rounded-full bg-on-secondary animate-ping"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-primary font-bold">3. Pengajuan CAPA Ronde 2</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[10px]">Aktif</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Sedang Disusun Pelaku Usaha</span>
+</div>
+</div>
+<!-- Step 4 (Upcoming) -->
+<div class="relative flex items-start gap-space-md opacity-60">
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[14px]">hourglass_empty</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface">4. Kajian Petugas Pemeriksa</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Estimasi 3–5 Hari Kerja</span>
+</div>
+</div>
+<!-- Step 5 (Upcoming) -->
+<div class="relative flex items-start gap-space-md opacity-60">
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[14px]">groups</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface">5. Verifikasi Tim Poksi Was</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Validasi Rekomendasi Teknis</span>
+</div>
+</div>
+<!-- Step 6 (Upcoming) -->
+<div class="relative flex items-start gap-space-md opacity-60">
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface">6. Pengesahan Kepala Balai</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Tanda Tangan Elektronik (TTE BSrE)</span>
+</div>
+</div>
+<!-- Step 7 (Upcoming) -->
+<div class="relative flex items-start gap-space-md opacity-60">
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[14px]">task_alt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface">7. Surat Rekomendasi Resmi (Closed)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Status Temuan: Selesai / Memenuhi Syarat</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SIDEBAR B: KOTAK KONSULTASI & PEMBINA TEKNIS SARANA -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm uppercase tracking-wider text-on-surface-variant">Pembina Teknis Sarana</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            Siap Melayani
+          </span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="relative w-14 h-14 rounded-full overflow-hidden bg-surface-container shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Professional Indonesian female government health laboratory supervisor in formal civil servant uniform with headscarf, bright friendly welcoming office portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv3EyOMbLDE6yj4dKM_WyQxLRTn3HnMMIXCSi98qdzpMH_V7NJwSZMZ0BzV5bJHguzEgM4ofxUdrSHBR84yTMObf38uygZWdQx49HN4I4Wb8emY2qqdGn3sGw2LfVd_j7AiGA0fDOUm7Hati7a8NKuTRVaXyayZLBoFSTCB7DfsCZzgIk_4REvrVZfq1LwIRsKbLvrcokIFYGbOZsEDKnsVX7rUw87emH6FPBxXwgdpsgEEWkERX2sfg"/>
+</div>
+<div class="flex flex-col">
+<h4 class="font-headline-md text-headline-md text-on-surface leading-snug">Dr. Ratna Kusumastuti, M.Sc</h4>
+<span class="font-label-sm text-on-surface-variant">PFM Ahli Muda • Poksi Pemeriksaan</span>
+<span class="font-label-sm text-primary font-semibold text-[11px] mt-0.5">BBPOM di Palangka Raya</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm leading-relaxed">
+          “Membutuhkan klarifikasi format SOP atau kelengkapan eviden sebelum submit Ronde 2? Tim kami siap membimbing agar CAPA langsung disetujui.”
+        </div>
+<div class="flex flex-col gap-2 pt-space-xs">
+<a class="w-full py-2.5 px-3 rounded-lg bg-primary-fixed text-on-primary-fixed font-label-md flex items-center justify-center gap-2 hover:bg-primary-fixed-dim transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Konsultasi WhatsApp Resmi</span>
+</a>
+<button class="w-full py-2.5 px-3 rounded-lg bg-surface-container-low text-on-surface font-label-md flex items-center justify-center gap-2 hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+<span>Kirim Pertanyaan Tertulis</span>
+</button>
+</div>
+</section>
+<!-- SIDEBAR C: TIPS KELULUSAN CAPA -->
+<section class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Tips Kelulusan Verifikasi CAPA</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Hindari 3 faktor utama yang paling sering menyebabkan pengajuan CAPA pelaku usaha ditolak evaluator:
+        </p>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-error-container text-on-error-container font-label-sm flex items-center justify-center shrink-0 mt-0.5">1</span>
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface">Foto Eviden Buram / Sudut Berbeda</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Pastikan foto sesudah perbaikan diambil dari posisi yang identik dengan foto temuan petugas.</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-error-container text-on-error-container font-label-sm flex items-center justify-center shrink-0 mt-0.5">2</span>
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface">Tidak Melampirkan SOP Pencegahan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Perbaikan fisik saja tidak cukup; sertakan instruksi kerja atau lembar kontrol agar tidak berulang.</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="w-5 h-5 rounded-full bg-error-container text-on-error-container font-label-sm flex items-center justify-center shrink-0 mt-0.5">3</span>
+<div class="flex flex-col">
+<span class="font-label-md text-on-surface">Hanya Solusi Sementara</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Wajib mencantumkan komitmen manajemen sarana dan tanda tangan penanggung jawab teknis.</span>
+</div>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-xs flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-primary text-[18px]">support_agent</span>
+<span class="font-label-sm text-on-surface-variant text-[11px]">BBPOM di Palangka Raya berkomitmen mendampingi UMKM Kalteng berdaya saing dan patuh regulasi.</span>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for visual feedback on form submission preview
+  document.addEventListener('DOMContentLoaded', () => {
+    const mainSubmit = document.querySelector('button[type="button"].group');
+    if (mainSubmit) {
+      mainSubmit.addEventListener('click', () => {
+        const confirmed = confirm("Kirim dokumen CAPA Ronde 2 ke evaluator BBPOM di Palangka Raya sekarang?");
+        if (confirmed) {
+          alert("Dokumen CAPA Ronde 2 berhasil dikirim. Estimasi evaluasi oleh petugas adalah 3-5 hari kerja.");
+        }
+      });
+    }
+  });
+</script></main></div></body></html>
