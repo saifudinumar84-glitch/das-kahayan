@@ -35,10 +35,6 @@ Route::get('/pengujian/{id?}', InspectionDetail::class)->name('publik.detail-pen
 */
 
 Route::prefix('portal-usaha')->group(function () {
-    Route::get('/', function () {
-        return auth()->check() ? redirect()->route('portal.dashboard') : redirect()->route('portal.login');
-    });
-
     Route::get('/login', Login::class)->middleware('guest')->name('portal.login');
 
     Route::post('/logout', function () {
