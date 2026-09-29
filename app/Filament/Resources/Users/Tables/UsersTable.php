@@ -30,9 +30,15 @@ class UsersTable
                     ->label('Telepon')
                     ->searchable(),
                 TextColumn::make('role')
-                    ->label('Peran')
+                    ->label('Peran Utama')
                     ->badge()
                     ->sortable(),
+                TextColumn::make('roles.name')
+                    ->label('Peran (Spatie)')
+                    ->badge()
+                    ->separator(', ')
+                    ->color('info')
+                    ->searchable(),
                 IconColumn::make('is_active')
                     ->label('Aktif')
                     ->boolean()
@@ -45,8 +51,11 @@ class UsersTable
             ])
             ->filters([
                 SelectFilter::make('role')
-                    ->label('Peran')
+                    ->label('Peran Utama')
                     ->options(UserRole::class),
+                SelectFilter::make('roles')
+                    ->label('Peran Spatie')
+                    ->relationship('roles', 'name'),
                 TernaryFilter::make('is_active')
                     ->label('Status Aktif'),
             ])

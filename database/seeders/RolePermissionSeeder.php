@@ -63,6 +63,7 @@ class RolePermissionSeeder extends Seeder
         $businessRole->syncPermissions([
             PermissionType::SubmitCapa->value,
             PermissionType::ViewReports->value,
+            PermissionType::ExportReports->value,
         ]);
 
         // Sync Spatie role for all existing users

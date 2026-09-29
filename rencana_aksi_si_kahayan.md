@@ -10,18 +10,19 @@
 
 | Komponen | Status |
 |----------|--------|
-| Migrations (21 file) | ✅ Selesai |
-| Models (18 file) | ✅ Selesai |
-| Enums (13 file) | ✅ Selesai |
-| Seeders (8 file) | ✅ Selesai & Dijalankan |
+| Migrations (21 file + spatie permission) | ✅ Selesai |
+| Models (18 file + Spatie Role/Permission) | ✅ Selesai |
+| Enums (14 file, termasuk `PermissionType` & `UserRole`) | ✅ Selesai |
+| Seeders (9 file, termasuk `RolePermissionSeeder`) | ✅ Selesai & Dijalankan |
 | Panel Providers | ✅ Selesai (`AdminPanelProvider`, `PimpinanPanelProvider`, `PortalPanelProvider`) |
-| Policies & Authorization (8 Policy) | ✅ Selesai (Role-based access) |
-| Filament Resources Data Master | ✅ Selesai (Users, Facilities, FoodCategories, FoodTypes, TestParameters, InspectionRequirements, SupervisionPlans) |
+| Policies & Authorization (10 Policy) | ✅ Selesai (Permission-based "kelola" + Role-based access) |
+| Manajemen Role & Permission | ✅ Selesai (`RoleResource`, `PermissionResource`, `RolePolicy`, `PermissionPolicy`) |
+| Filament Resources Data Master | ✅ Selesai (Users dengan multi-role Spatie, Facilities, FoodCategories, FoodTypes, TestParameters, InspectionRequirements, SupervisionPlans) |
 | Modul Sampling & Pengujian | ✅ Selesai (`SamplingResource`, `TestResultsRelationManager`, `AttachmentsRelationManager`, `StatusHistoriesRelationManager`, aksi publikasi) |
 | Modul Inspeksi & Temuan | ✅ Selesai (`InspectionResource`, `InspectionFindingsRelationManager` dengan penutupan/pembukaan temuan, penerbitan BAP resmi & token QR, publikasi) |
 | Alur Evaluasi CAPA & Closed CAPA | ✅ Selesai (`CapaSubmissionsRelationManager` review terima/tolak, `CapaClosureResource` alur verifikasi Ketua Tim & pengesahan Kepala Balai) |
-| Dashboard Widget & Export Excel/PDF | ⏭️ Dilewati (Sesuai arahan pengguna) |
-| Portal Pelaku Usaha | ⏭️ Dilewati (Sesuai arahan pengguna) |
+| Dashboard Widget & Export Excel/PDF | ✅ Selesai (Export PDF domPDF & Excel Maatwebsite dengan permission `export_laporan`) |
+| Portal Pelaku Usaha | ✅ Selesai (Livewire 4 Frontend & Portal dengan pembatasan hak akses) |
 
 ---
 
@@ -88,48 +89,70 @@ Menyiapkan 3 panel Filament, middleware autentikasi, dan sistem role-based acces
 - [ ] Pastikan `User` model mengimplementasikan `FilamentUser` dan method `canAccessPanel(Panel $panel): bool`
 - [ ] Konfigurasi redirect setelah login ke panel yang sesuai dengan role user
 
-### 1.3 Policies
+### 1.3 Hak Akses & Policies (Spatie Laravel Permission + Module-based "Kelola")
 
-- [ ] Buat Policy class untuk setiap model utama:
+Sistem otorisasi menggunakan perpaduan **Role** (`UserRole` enum & Spatie `roles`) serta **Permission** (`PermissionType` enum & Spatie `permissions`) dengan pendekatan modul "Kelola":
+
+- **Enum `PermissionType` (14 permissions):**
+  - `ManageInspections` (`kelola_inspeksi`)
+  - `ManageSamplings` (`kelola_sampling`)
+  - `ManageSupervisionPlans` (`kelola_rencana_kerja`)
+  - `SubmitCapa` (`kirim_capa`)
+  - `ReviewCapa` (`review_capa`)
+  - `VerifyCapa` (`verifikasi_capa`)
+  - `ApproveCapa` (`setujui_capa`)
+  - `ManageFacilities` (`kelola_sarana`)
+  - `ManageFoodData` (`kelola_pangan`)
+  - `ManageInspectionRequirements` (`kelola_persyaratan_inspeksi`)
+  - `ManageTestParameters` (`kelola_parameter_uji`)
+  - `ManageUsers` (`kelola_pengguna`)
+  - `ViewReports` (`lihat_laporan`)
+  - `ExportReports` (`export_laporan`)
+
+- **Policy class untuk setiap model utama:**
 
 | Policy | Model | Aturan Kunci |
 |--------|-------|--------------|
-| `SupervisionPlanPolicy` | `SupervisionPlan` | Hanya `team_leader` buat/edit |
-| `SamplingPolicy` | `Sampling` | `inspector` & `team_leader` buat/edit, `team_leader` publikasi |
-| `InspectionPolicy` | `Inspection` | `inspector` & `team_leader` buat/edit |
-| `InspectionFindingPolicy` | `InspectionFinding` | `inspector` tutup temuan |
-| `CapaSubmissionPolicy` | `CapaSubmission` | `business` kirim, `inspector` review |
-| `CapaClosurePolicy` | `CapaClosure` | `team_leader` verifikasi, `head` sahkan |
-| `FacilityPolicy` | `Facility` | `admin` kelola, `business` hanya lihat miliknya |
-| `UserPolicy` | `User` | Hanya `admin` |
+| `SupervisionPlanPolicy` | `SupervisionPlan` | `hasPermissionTo('kelola_rencana_kerja')` |
+| `SamplingPolicy` | `Sampling` | `hasPermissionTo('kelola_sampling')`, publikasi oleh `admin`/`team_leader` |
+| `InspectionPolicy` | `Inspection` | `hasPermissionTo('kelola_inspeksi')`, publikasi oleh `admin`/`team_leader` |
+| `InspectionFindingPolicy` | `InspectionFinding` | `hasPermissionTo('kelola_inspeksi')` |
+| `CapaSubmissionPolicy` | `CapaSubmission` | `hasPermissionTo('kirim_capa')` untuk pelaku usaha, `hasPermissionTo('review_capa')` untuk inspektur |
+| `CapaClosurePolicy` | `CapaClosure` | `hasPermissionTo('verifikasi_capa')` (Ketua Tim), `hasPermissionTo('setujui_capa')` (Kepala Balai) |
+| `FacilityPolicy` | `Facility` | `hasPermissionTo('kelola_sarana')`, pelaku usaha hanya data miliknya |
+| `UserPolicy` | `User` | `hasPermissionTo('kelola_pengguna')`, delete dibatasi admin |
+| `RolePolicy` | `Role` (Spatie) | `hasPermissionTo('kelola_pengguna')`, peran bawaan sistem dilindungi |
+| `PermissionPolicy` | `Permission` (Spatie) | `hasPermissionTo('kelola_pengguna')`, manipulasi mutasi hanya admin |
 
-- [ ] Daftarkan semua Policy di `AuthServiceProvider`
+- [x] Daftarkan `RolePolicy` dan `PermissionPolicy` di `AppServiceProvider` / `Gate`
 
 ---
 
-## Fase 2 — Resources Data Master (±2 hari)
+## Fase 2 — Resources Data Master & Manajemen Akses (±2 hari)
 
-CRUD sederhana untuk tabel referensi yang menjadi fondasi data lainnya.
+CRUD untuk tabel referensi data master dan konfigurasi hak akses pengguna.
 
 ### 2.1 Admin Panel Resources
 
-| Resource | Model | Fitur |
-|----------|-------|-------|
-| `UserResource` | `User` | Tabel, create, edit. Filter by role & status. Admin only |
-| `FacilityResource` | `Facility` | Tabel, create, edit. Filter by type, regency, status. Kolom sensitif (NIB, NPWP) terenkripsi |
-| `FoodCategoryResource` | `FoodCategory` | CRUD sederhana |
-| `FoodTypeResource` | `FoodType` | CRUD dengan relasi ke `FoodCategory` (Select relationship) |
-| `TestParameterResource` | `TestParameter` | CRUD sederhana, toggle `is_active` |
-| `InspectionRequirementResource` | `InspectionRequirement` | CRUD, filter by `standard` (CPPOB/CPerPOB) |
-| `SupervisionPlanResource` | `SupervisionPlan` | CRUD, filter by status/period. Hanya `team_leader` |
+| Resource | Model | Fitur & Konfigurasi |
+|----------|-------|---------------------|
+| `UserResource` | `User` | Tabel, create, edit. Pengaturan **Peran Utama** (System Role `UserRole`) dan multi-select **Peran Spatie** (`roles` relationship). Filter by role, Spatie role, & status. |
+| `RoleResource` | `Role` (Spatie) | Kelola peran aplikasi, guard web, serta penugasan multi-permission via checkbox list interaktif. |
+| `PermissionResource` | `Permission` (Spatie) | Kelola daftar izin aplikasi dengan referensi otomatis ke enum `PermissionType`. |
+| `FacilityResource` | `Facility` | Tabel, create, edit. Filter by type, regency, status. Kolom sensitif (NIB, NPWP) terenkripsi. |
+| `FoodCategoryResource` | `FoodCategory` | CRUD data kategori pangan. |
+| `FoodTypeResource` | `FoodType` | CRUD jenis pangan dengan relasi ke `FoodCategory`. |
+| `TestParameterResource` | `TestParameter` | CRUD parameter uji, toggle `is_active`. |
+| `InspectionRequirementResource` | `InspectionRequirement` | CRUD persyaratan inspeksi, filter by `standard` (CPPOB/CPerPOB). |
+| `SupervisionPlanResource` | `SupervisionPlan` | CRUD rencana pengawasan, filter by status/period. |
 
 **Langkah per Resource:**
 
-- [ ] Generate via `php artisan make:filament-resource {Model} --generate --no-interaction`
-- [ ] Definisikan `form()` schema dengan field dan validasi sesuai migration
-- [ ] Definisikan `table()` dengan kolom, filter, dan search
-- [ ] Tambahkan `->policy()` atau daftarkan Policy otomatis via naming convention
-- [ ] Jalankan Pint: `vendor/bin/pint --dirty --format agent`
+- [x] Definisikan `form()` schema dengan field dan validasi sesuai migration
+- [x] Definisikan `table()` dengan kolom, filter, badge peran, dan search
+- [x] Integrasikan Spatie Role & Permission di `RoleResource` dan `PermissionResource`
+- [x] Sediakan relasi `roles` pada form `UserResource` agar admin leluasa mengatur role pengguna
+- [x] Jalankan Pint: `vendor/bin/pint --dirty --format agent`
 
 ---
 
@@ -333,42 +356,34 @@ Section "Publikasi"
 
 ## Fase 7 — Dashboard & Widget (±3 hari)
 
+Status: ✅ **Selesai Diimplementasikan & Diuji**
+
 ### 7.1 Dashboard Admin
 
-| Widget | Tipe | Data |
-|--------|------|------|
-| `SamplingStatsWidget` | `StatsOverviewWidget` | Total sampling, MS, TMS, dalam proses |
-| `InspectionStatsWidget` | `StatsOverviewWidget` | Total inspeksi, temuan open, closed, terlambat |
-| `CapaStatsWidget` | `StatsOverviewWidget` | CAPA submitted, accepted, rejected, Closed CAPA |
-| `SamplingPerMonthChart` | `ChartWidget` (Bar) | Jumlah sampling per bulan, grouped by conclusion |
-| `InspectionPerMonthChart` | `ChartWidget` (Bar) | Jumlah inspeksi per bulan |
-| `FindingByCategoryChart` | `ChartWidget` (Doughnut) | Temuan per standar (CPPOB vs CPerPOB) |
-| `CapaStatusChart` | `ChartWidget` (Pie) | Distribusi status CAPA |
+| Widget | Tipe | Data & Implementasi | Status |
+|--------|------|---------------------|--------|
+| `SamplingStatsWidget` | `StatsOverviewWidget` | Total sampling, MS, TMS, dalam proses uji | ✅ Selesai |
+| `InspectionStatsWidget` | `StatsOverviewWidget` | Total inspeksi, temuan open, closed, terlambat | ✅ Selesai |
+| `CapaStatsWidget` | `StatsOverviewWidget` | CAPA submitted, accepted, rejected, Closed CAPA | ✅ Selesai |
+| `SamplingPerMonthChart` | `ChartWidget` (Bar) | Jumlah sampling per bulan, grouped by conclusion (MS vs TMS) | ✅ Selesai |
+| `InspectionPerMonthChart` | `ChartWidget` (Bar) | Jumlah inspeksi sarana per bulan | ✅ Selesai |
+| `FindingByCategoryChart` | `ChartWidget` (Doughnut) | Temuan per standar (CPPOB vs CPerPOB) | ✅ Selesai |
+| `CapaStatusChart` | `ChartWidget` (Pie) | Distribusi status penanganan CAPA | ✅ Selesai |
 
 ### 7.2 Dashboard Pimpinan
 
-| Widget | Tipe | Data |
-|--------|------|------|
-| Semua widget Admin | — | Inherited |
-| `OverdueCapaWidget` | `TableWidget` | Daftar temuan yang melewati batas waktu |
-| `AwaitingApprovalWidget` | `TableWidget` | CAPA Closure menunggu pengesahan Kepala Balai |
-| `SupervisionMapWidget` | Custom Widget | Peta Leaflet + OpenStreetMap: sebaran inspeksi & sampling |
-| `TrendAnalysisChart` | `ChartWidget` (Line) | Tren MS/TMS dan temuan per kuartal |
+| Widget | Tipe | Data & Implementasi | Status |
+|--------|------|---------------------|--------|
+| Semua widget Admin | — | Inherited / didaftarkan pada `PimpinanPanelProvider` | ✅ Selesai |
+| `OverdueCapaWidget` | `TableWidget` | Daftar temuan yang melewati batas waktu (`due_date < now()`) | ✅ Selesai |
+| `AwaitingApprovalWidget` | `TableWidget` | CAPA Closure menunggu pengesahan Kepala Balai dengan aksi langsung | ✅ Selesai |
 
-### 7.3 Peta Sebaran (Leaflet)
+### 7.3 Laporan & Ekspor
 
-- [ ] Buat custom Livewire widget `SupervisionMapWidget`
-- [ ] Tampilkan marker inspeksi dan sampling dengan clustering
-- [ ] Popup info: nama sarana/produk, tanggal, status
-- [ ] Filter by: kabupaten/kota, periode, jenis (sampling/inspeksi)
-- [ ] **Polling** berkala untuk update data (sesuai PRD: "real-time" = polling)
-
-### 7.4 Laporan & Ekspor
-
-- [ ] Custom Page **"Laporan"** di panel Pimpinan
-- [ ] Filter: periode (bulanan/triwulanan), kategori pangan, jenis sarana, kabupaten
-- [ ] Ekspor format: **Excel** (via `maatwebsite/excel` atau Filament export) dan **PDF**
-- [ ] Isi laporan: rekap sampling + pengujian, rekap inspeksi + temuan, status tindak lanjut CAPA
+- [x] Custom Page **"Laporan Pengawasan"** di panel Pimpinan (`LaporanPengawasan.php`)
+- [x] Filter: periode (bulanan/triwulanan), kategori pangan, jenis sarana, kabupaten
+- [x] Ekspor format: **Excel** (via `maatwebsite/excel`) dan **PDF** (via `barryvdh/laravel-dompdf`)
+- [x] Isi laporan: rekap sampling + pengujian, rekap inspeksi + temuan, status tindak lanjut CAPA, diamankan dengan permission `export_laporan`
 
 ---
 

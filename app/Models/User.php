@@ -64,10 +64,14 @@ class User extends Authenticatable implements FilamentUser
     protected static function booted(): void
     {
         static::saved(function (User $user): void {
-            $roleName = $user->role instanceof UserRole ? $user->role->value : (string) $user->role;
-            if (! empty($roleName)) {
-                Role::findOrCreate($roleName, 'web');
-                $user->syncRoles([$roleName]);
+            if (! empty($user->role)) {
+                $roleName = $user->role instanceof UserRole ? $user->role->value : (string) $user->role;
+                if (! empty($roleName)) {
+                    Role::findOrCreate($roleName, 'web');
+                    if (! $user->hasRole($roleName)) {
+                        $user->assignRole($roleName);
+                    }
+                }
             }
         });
     }
@@ -82,9 +86,9 @@ class User extends Authenticatable implements FilamentUser
         }
 
         return match ($panel->getId()) {
-            'admin' => in_array($this->role, [UserRole::Admin, UserRole::Inspector, UserRole::TeamLeader], true),
-            'pimpinan' => in_array($this->role, [UserRole::Head, UserRole::TeamLeader, UserRole::Admin], true),
-            'portal' => in_array($this->role, [UserRole::Business, UserRole::Admin], true),
+            'admin' => $this->hasAnyRole(['admin', 'inspector', 'team_leader']) || in_array($this->role, [UserRole::Admin, UserRole::Inspector, UserRole::TeamLeader], true),
+            'pimpinan' => $this->hasAnyRole(['head', 'team_leader', 'admin']) || in_array($this->role, [UserRole::Head, UserRole::TeamLeader, UserRole::Admin], true),
+            'portal' => $this->hasAnyRole(['business', 'admin']) || in_array($this->role, [UserRole::Business, UserRole::Admin], true),
             default => false,
         };
     }

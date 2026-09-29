@@ -6,6 +6,13 @@ use App\Filament\Pages\LaporanPengawasan;
 use App\Filament\Resources\CapaClosures\CapaClosureResource;
 use App\Filament\Resources\Inspections\InspectionResource;
 use App\Filament\Resources\Samplings\SamplingResource;
+use App\Filament\Widgets\CapaStatsWidget;
+use App\Filament\Widgets\CapaStatusChart;
+use App\Filament\Widgets\FindingByCategoryChart;
+use App\Filament\Widgets\InspectionPerMonthChart;
+use App\Filament\Widgets\InspectionStatsWidget;
+use App\Filament\Widgets\SamplingPerMonthChart;
+use App\Filament\Widgets\SamplingStatsWidget;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -46,6 +53,13 @@ class PimpinanPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Pimpinan/Widgets'), for: 'App\Filament\Pimpinan\Widgets')
             ->widgets([
+                SamplingStatsWidget::class,
+                InspectionStatsWidget::class,
+                CapaStatsWidget::class,
+                SamplingPerMonthChart::class,
+                InspectionPerMonthChart::class,
+                FindingByCategoryChart::class,
+                CapaStatusChart::class,
             ])
             ->middleware([
                 EncryptCookies::class,

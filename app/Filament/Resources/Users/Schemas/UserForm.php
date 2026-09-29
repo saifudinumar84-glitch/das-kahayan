@@ -35,10 +35,23 @@ class UserForm
                                 ->tel()
                                 ->maxLength(50),
                             Select::make('role')
-                                ->label('Peran (Role)')
+                                ->label('Peran Utama')
                                 ->options(UserRole::class)
                                 ->default(UserRole::Inspector)
-                                ->required(),
+                                ->required()
+                                ->helperText('Peran sistem utama pengguna.'),
+                            Select::make('roles')
+                                ->label('Peran (Spatie Roles)')
+                                ->relationship('roles', 'name')
+                                ->getOptionLabelFromRecordUsing(function ($record): string {
+                                    $userRole = UserRole::tryFrom($record->name);
+
+                                    return $userRole ? "{$userRole->getLabel()} ({$record->name})" : $record->name;
+                                })
+                                ->multiple()
+                                ->preload()
+                                ->searchable()
+                                ->helperText('Atur peran & hak akses spesifik untuk pengguna ini.'),
                             TextInput::make('password')
                                 ->label('Kata Sandi')
                                 ->password()
