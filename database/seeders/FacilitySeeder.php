@@ -14,8 +14,6 @@ class FacilitySeeder extends Seeder
 
     /**
      * Seed facility data (production and distribution) with associated business users.
-     *
-     * @return void
      */
     public function run(): void
     {

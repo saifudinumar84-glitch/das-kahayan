@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Enums\UserRole;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -17,8 +16,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            // 1. Master Users (semua peran)
+            // 1. Master Users & Roles/Permissions
             UserSeeder::class,
+            RolePermissionSeeder::class,
 
             // 2. Data Master Pangan
             FoodCategorySeeder::class,   // food_categories + food_types

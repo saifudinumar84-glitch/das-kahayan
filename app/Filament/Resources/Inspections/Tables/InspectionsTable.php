@@ -76,6 +76,11 @@ class InspectionsTable
             ])
             ->recordActions([
                 EditAction::make(),
+                Action::make('printBap')
+                    ->label('Cetak BAP PDF')
+                    ->icon('heroicon-o-printer')
+                    ->color('gray')
+                    ->url(fn (Inspection $record): string => route('export.bap.pdf', $record->id), shouldOpenInNewTab: true),
                 Action::make('issueBap')
                     ->label('Terbitkan BAP')
                     ->icon('heroicon-o-document-text')

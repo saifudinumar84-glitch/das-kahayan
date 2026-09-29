@@ -16,7 +16,6 @@ use App\Models\TestResult;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Str;
 
 class SamplingSeeder extends Seeder
 {
@@ -24,8 +23,6 @@ class SamplingSeeder extends Seeder
 
     /**
      * Seed supervision plans and sampling data for Layanan A (Informasi Hasil Sampling & Pengujian).
-     *
-     * @return void
      */
     public function run(): void
     {

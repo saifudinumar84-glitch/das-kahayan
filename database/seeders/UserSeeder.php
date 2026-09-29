@@ -14,8 +14,6 @@ class UserSeeder extends Seeder
 
     /**
      * Seed user accounts for all roles in Si Kahayan.
-     *
-     * @return void
      */
     public function run(): void
     {

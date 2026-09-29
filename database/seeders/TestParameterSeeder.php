@@ -12,8 +12,6 @@ class TestParameterSeeder extends Seeder
 
     /**
      * Seed laboratory test parameters commonly used by BBPOM Palangka Raya.
-     *
-     * @return void
      */
     public function run(): void
     {

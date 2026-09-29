@@ -116,20 +116,38 @@
         </div>
     </div>
 
-    {{-- Tab Switcher --}}
-    <div class="flex flex-col sm:flex-row sm:items-center gap-space-md mb-space-md">
-        <div class="inline-flex p-1 bg-surface-container rounded-lg">
-            <button wire:click="switchTab('sampel')" type="button"
-                    class="px-space-md py-space-xs rounded-md font-label-md text-label-md transition-all {{ $activeTab === 'sampel' ? 'text-on-primary bg-primary-container shadow-sm' : 'text-on-surface-variant hover:text-on-surface' }}">
-                <span class="material-symbols-outlined text-[16px] align-middle mr-1">science</span> Hasil Pengujian Sampel
-            </button>
-            <button wire:click="switchTab('sarana')" type="button"
-                    class="px-space-md py-space-xs rounded-md font-label-md text-label-md transition-all {{ $activeTab === 'sarana' ? 'text-on-primary bg-secondary shadow-sm' : 'text-on-surface-variant hover:text-on-surface' }}">
-                <span class="material-symbols-outlined text-[16px] align-middle mr-1">storefront</span> Pemeriksaan Sarana
-            </button>
+    {{-- Tab Switcher & Export Actions --}}
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md mb-space-md">
+        <div class="flex items-center gap-space-md">
+            <div class="inline-flex p-1 bg-surface-container rounded-lg">
+                <button wire:click="switchTab('sampel')" type="button"
+                        class="px-space-md py-space-xs rounded-md font-label-md text-label-md transition-all {{ $activeTab === 'sampel' ? 'text-on-primary bg-primary-container shadow-sm' : 'text-on-surface-variant hover:text-on-surface' }}">
+                    <span class="material-symbols-outlined text-[16px] align-middle mr-1">science</span> Hasil Pengujian Sampel
+                </button>
+                <button wire:click="switchTab('sarana')" type="button"
+                        class="px-space-md py-space-xs rounded-md font-label-md text-label-md transition-all {{ $activeTab === 'sarana' ? 'text-on-primary bg-secondary shadow-sm' : 'text-on-surface-variant hover:text-on-surface' }}">
+                    <span class="material-symbols-outlined text-[16px] align-middle mr-1">storefront</span> Pemeriksaan Sarana
+                </button>
+            </div>
+            <div wire:loading class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+                <span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span> Memuat...
+            </div>
         </div>
-        <div wire:loading class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
-            <span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span> Memuat...
+
+        {{-- Export Buttons --}}
+        <div class="flex items-center gap-2">
+            <a href="{{ route('export.public.excel', ['type' => $activeTab === 'sampel' ? 'sampling' : 'inspection', 'regency' => $regency, 'conclusion' => $conclusion]) }}"
+               target="_blank"
+               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors border border-outline-variant/30">
+                <span class="material-symbols-outlined text-[16px] text-emerald-600">table_view</span>
+                <span>Ekspor Excel</span>
+            </a>
+            <a href="{{ route('export.public.pdf', ['type' => $activeTab === 'sampel' ? 'sampling' : 'inspection', 'regency' => $regency, 'conclusion' => $conclusion]) }}"
+               target="_blank"
+               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors border border-outline-variant/30">
+                <span class="material-symbols-outlined text-[16px] text-rose-600">picture_as_pdf</span>
+                <span>Ekspor PDF</span>
+            </a>
         </div>
     </div>
 

@@ -2,7 +2,10 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Pages\LaporanPengawasan;
 use App\Filament\Resources\CapaClosures\CapaClosureResource;
+use App\Filament\Resources\Inspections\InspectionResource;
+use App\Filament\Resources\Samplings\SamplingResource;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -33,10 +36,13 @@ class PimpinanPanelProvider extends PanelProvider
             ->discoverResources(in: app_path('Filament/Pimpinan/Resources'), for: 'App\Filament\Pimpinan\Resources')
             ->resources([
                 CapaClosureResource::class,
+                InspectionResource::class,
+                SamplingResource::class,
             ])
             ->discoverPages(in: app_path('Filament/Pimpinan/Pages'), for: 'App\Filament\Pimpinan\Pages')
             ->pages([
                 Dashboard::class,
+                LaporanPengawasan::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Pimpinan/Widgets'), for: 'App\Filament\Pimpinan\Widgets')
             ->widgets([

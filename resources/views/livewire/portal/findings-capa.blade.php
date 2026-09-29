@@ -22,13 +22,24 @@
                     <span class="material-symbols-outlined text-[20px] text-secondary">menu_book</span>
                     <span>Panduan CAPA</span>
                 </a>
-                <button 
-                    onclick="window.print()" 
-                    class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-sm transition-colors"
+                <a 
+                    href="{{ route('export.portal.capa.excel') }}" 
+                    target="_blank"
+                    class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-sm transition-colors border border-outline-variant/30"
+                    title="Unduh Rekap Format Excel"
                 >
-                    <span class="material-symbols-outlined text-[20px] text-primary">download</span>
-                    <span>Unduh Rekap</span>
-                </button>
+                    <span class="material-symbols-outlined text-[20px] text-emerald-600">table_view</span>
+                    <span>Excel</span>
+                </a>
+                <a 
+                    href="{{ route('export.portal.capa.pdf') }}" 
+                    target="_blank"
+                    class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-sm transition-colors border border-outline-variant/30"
+                    title="Unduh Rekap Format PDF"
+                >
+                    <span class="material-symbols-outlined text-[20px] text-rose-600">picture_as_pdf</span>
+                    <span>PDF</span>
+                </a>
             </div>
         </div>
 

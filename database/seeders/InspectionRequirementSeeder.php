@@ -14,8 +14,6 @@ class InspectionRequirementSeeder extends Seeder
     /**
      * Seed CPPOB (production) and CPerPOB (distribution) inspection requirement clauses
      * based on BPOM regulations used by BBPOM Palangka Raya.
-     *
-     * @return void
      */
     public function run(): void
     {

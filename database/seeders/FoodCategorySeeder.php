@@ -13,8 +13,6 @@ class FoodCategorySeeder extends Seeder
 
     /**
      * Seed food categories and food types based on BPOM food category codes.
-     *
-     * @return void
      */
     public function run(): void
     {

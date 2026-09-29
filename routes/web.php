@@ -35,7 +35,7 @@ Route::get('/pengujian/{id?}', InspectionDetail::class)->name('publik.detail-pen
 */
 
 Route::prefix('portal-usaha')->group(function () {
-    Route::get('/login', Login::class)->name('portal.login');
+    Route::get('/login', Login::class)->middleware('guest')->name('portal.login');
 
     Route::post('/logout', function () {
         Auth::logout();
@@ -45,9 +45,42 @@ Route::prefix('portal-usaha')->group(function () {
         return redirect()->route('portal.login');
     })->name('portal.logout');
 
-    Route::get('/dashboard', Dashboard::class)->name('portal.dashboard');
-    Route::get('/temuan-capa', FindingsCapa::class)->name('portal.temuan-capa');
-    Route::get('/capa/kirim/{findingId?}', SubmitCapa::class)->name('portal.submit-capa');
-    Route::get('/dokumen', Documents::class)->name('portal.dokumen');
-    Route::get('/profil', FacilityProfile::class)->name('portal.profil');
+    Route::middleware(['auth', 'role:business|admin'])->group(function () {
+        Route::get('/dashboard', Dashboard::class)->name('portal.dashboard');
+        Route::get('/temuan-capa', FindingsCapa::class)->name('portal.temuan-capa');
+        Route::get('/capa/kirim/{findingId?}', SubmitCapa::class)->name('portal.submit-capa');
+        Route::get('/dokumen', Documents::class)->name('portal.dokumen');
+        Route::get('/profil', FacilityProfile::class)->name('portal.profil');
+    });
+});
+
+/*
+|--------------------------------------------------------------------------
+| Export Routes (PDF & Excel)
+|--------------------------------------------------------------------------
+*/
+
+use App\Http\Controllers\ReportExportController;
+
+Route::prefix('export')->group(function () {
+    // Public Exports
+    Route::get('/publik/excel', [ReportExportController::class, 'exportPublicExcel'])->name('export.public.excel');
+    Route::get('/publik/pdf', [ReportExportController::class, 'exportPublicPdf'])->name('export.public.pdf');
+
+    // Authenticated Exports
+    Route::middleware('auth')->group(function () {
+        // Executive Supervision Report (PDF & Excel)
+        Route::get('/laporan/excel', [ReportExportController::class, 'exportExecutiveReportExcel'])->name('export.executive.excel');
+        Route::get('/laporan/pdf', [ReportExportController::class, 'exportExecutiveReportPdf'])->name('export.executive.pdf');
+
+        // BAP Document PDF
+        Route::get('/bap/{id}/pdf', [ReportExportController::class, 'exportBapPdf'])->name('export.bap.pdf');
+
+        // Sampling Lab Test Report PDF
+        Route::get('/sampling/{id}/pdf', [ReportExportController::class, 'exportSamplingPdf'])->name('export.sampling.pdf');
+
+        // Portal Pelaku Usaha CAPA
+        Route::get('/portal/capa/excel', [ReportExportController::class, 'exportPortalCapaExcel'])->name('export.portal.capa.excel');
+        Route::get('/portal/capa/pdf', [ReportExportController::class, 'exportPortalCapaPdf'])->name('export.portal.capa.pdf');
+    });
 });

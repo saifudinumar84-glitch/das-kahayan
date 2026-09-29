@@ -33,8 +33,6 @@ class InspectionSeeder extends Seeder
      * Seed inspection data with complete Layanan B workflow:
      * Planning → In Progress (geotagging) → BAP → Follow-up Letter
      * → CAPA Submission → CAPA Review → CAPA Closure (Verify → Approve → Send).
-     *
-     * @return void
      */
     public function run(): void
     {
@@ -136,7 +134,7 @@ class InspectionSeeder extends Seeder
             [
                 'document_number' => 'BAP-2026-BBPOM-0001',
                 'file_path' => 'bap/BAP-2026-BBPOM-0001.pdf',
-                'qr_token' => 'qr-' . Str::random(28),
+                'qr_token' => 'qr-'.Str::random(28),
                 'content_snapshot' => [
                     'inspection_number' => 'INSP-2026-0001',
                     'facility_name' => $facilityProd1->name,
@@ -310,7 +308,7 @@ class InspectionSeeder extends Seeder
             [
                 'document_number' => 'BAP-2026-BBPOM-0002',
                 'file_path' => 'bap/BAP-2026-BBPOM-0002.pdf',
-                'qr_token' => 'qr-' . Str::random(28),
+                'qr_token' => 'qr-'.Str::random(28),
                 'content_snapshot' => [
                     'inspection_number' => 'INSP-2026-0002',
                     'facility_name' => $facilityProd2->name,
@@ -425,7 +423,7 @@ class InspectionSeeder extends Seeder
             [
                 'document_number' => 'BAP-2026-BBPOM-0003',
                 'file_path' => 'bap/BAP-2026-BBPOM-0003.pdf',
-                'qr_token' => 'qr-' . Str::random(28),
+                'qr_token' => 'qr-'.Str::random(28),
                 'content_snapshot' => [
                     'inspection_number' => 'INSP-2026-0003',
                     'facility_name' => $facilityDist1->name,
@@ -477,7 +475,7 @@ class InspectionSeeder extends Seeder
             [
                 'document_number' => 'BAP-2026-BBPOM-0004',
                 'file_path' => 'bap/BAP-2026-BBPOM-0004.pdf',
-                'qr_token' => 'qr-' . Str::random(28),
+                'qr_token' => 'qr-'.Str::random(28),
                 'content_snapshot' => [
                     'inspection_number' => 'INSP-2026-0004',
                     'facility_name' => $facilityDist2->name,

@@ -76,6 +76,11 @@ class SamplingsTable
             ])
             ->recordActions([
                 EditAction::make(),
+                Action::make('printReport')
+                    ->label('Cetak Hasil Uji PDF')
+                    ->icon('heroicon-o-printer')
+                    ->color('gray')
+                    ->url(fn (Sampling $record): string => route('export.sampling.pdf', $record->id), shouldOpenInNewTab: true),
                 Action::make('publish')
                     ->label('Publikasikan')
                     ->icon('heroicon-o-globe-alt')
