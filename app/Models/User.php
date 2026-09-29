@@ -13,13 +13,18 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Permission\Exceptions\PermissionDoesNotExist;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements FilamentUser
 {
     /** @use HasFactory<UserFactory> */
-    use HasFactory, HasRoles, HasUuids, Notifiable;
+    use HasFactory, HasUuids, Notifiable;
+
+    use HasRoles {
+        hasPermissionTo as spatieHasPermissionTo;
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -91,6 +96,19 @@ class User extends Authenticatable implements FilamentUser
             'portal' => $this->hasAnyRole(['business', 'admin']) || in_array($this->role, [UserRole::Business, UserRole::Admin], true),
             default => false,
         };
+    }
+
+    /**
+     * Determine if the user has the given permission.
+     * Returns false gracefully if the permission has not been registered in the database.
+     */
+    public function hasPermissionTo($permission, $guard = null): bool
+    {
+        try {
+            return $this->spatieHasPermissionTo($permission, $guard);
+        } catch (PermissionDoesNotExist) {
+            return false;
+        }
     }
 
     /**
