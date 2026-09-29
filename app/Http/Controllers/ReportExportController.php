@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\PermissionType;
 use App\Enums\SamplingConclusion;
 use App\Enums\UserRole;
 use App\Exports\FindingsCapaExport;
@@ -246,10 +247,7 @@ class ReportExportController extends Controller
             abort(401);
         }
 
-        $allowedRoles = ['admin', 'head', 'team_leader', 'inspector'];
-        $roleValue = is_string($user->role) ? $user->role : $user->role?->value;
-
-        if (! in_array($roleValue, $allowedRoles, true)) {
+        if (! $user->hasPermissionTo(PermissionType::ExportLaporan->value)) {
             abort(403, 'Akses terbatas untuk Petugas BBPOM dan Pimpinan.');
         }
     }

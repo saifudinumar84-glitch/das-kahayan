@@ -2,6 +2,7 @@
 
 namespace App\Policies;
 
+use App\Enums\PermissionType;
 use App\Enums\UserRole;
 use App\Models\CapaClosure;
 use App\Models\User;
@@ -10,13 +11,10 @@ class CapaClosurePolicy
 {
     public function viewAny(User $user): bool
     {
-        return in_array($user->role, [
-            UserRole::Admin,
-            UserRole::Inspector,
-            UserRole::TeamLeader,
-            UserRole::Head,
-            UserRole::Business,
-        ], true);
+        return $user->hasPermissionTo(PermissionType::VerifikasiCapa->value)
+            || $user->hasPermissionTo(PermissionType::SetujuiCapa->value)
+            || $user->hasPermissionTo(PermissionType::ReviewCapa->value)
+            || $user->hasPermissionTo(PermissionType::LihatLaporan->value);
     }
 
     public function view(User $user, CapaClosure $capaClosure): bool
@@ -27,17 +25,18 @@ class CapaClosurePolicy
             return $facilityId && $user->facilities()->where('facilities.id', $facilityId)->exists();
         }
 
-        return true;
+        return $this->viewAny($user);
     }
 
     public function create(User $user): bool
     {
-        return in_array($user->role, [UserRole::Admin, UserRole::Inspector, UserRole::TeamLeader], true);
+        return $user->hasPermissionTo(PermissionType::VerifikasiCapa->value);
     }
 
     public function update(User $user, CapaClosure $capaClosure): bool
     {
-        return in_array($user->role, [UserRole::Admin, UserRole::TeamLeader, UserRole::Head], true);
+        return $user->hasPermissionTo(PermissionType::VerifikasiCapa->value)
+            || $user->hasPermissionTo(PermissionType::SetujuiCapa->value);
     }
 
     public function delete(User $user, CapaClosure $capaClosure): bool

@@ -2,6 +2,7 @@
 
 namespace App\Policies;
 
+use App\Enums\PermissionType;
 use App\Enums\UserRole;
 use App\Models\Sampling;
 use App\Models\User;
@@ -10,42 +11,36 @@ class SamplingPolicy
 {
     public function viewAny(User $user): bool
     {
-        return in_array($user->role, [
-            UserRole::Admin,
-            UserRole::Inspector,
-            UserRole::TeamLeader,
-            UserRole::Head,
-        ], true);
+        return $user->hasPermissionTo(PermissionType::KelolaSampling->value)
+            || $user->hasPermissionTo(PermissionType::LihatLaporan->value);
     }
 
     public function view(User $user, Sampling $sampling): bool
     {
-        return in_array($user->role, [
-            UserRole::Admin,
-            UserRole::Inspector,
-            UserRole::TeamLeader,
-            UserRole::Head,
-        ], true);
+        return $user->hasPermissionTo(PermissionType::KelolaSampling->value)
+            || $user->hasPermissionTo(PermissionType::LihatLaporan->value);
     }
 
     public function create(User $user): bool
     {
-        return in_array($user->role, [UserRole::Admin, UserRole::Inspector, UserRole::TeamLeader], true);
+        return $user->hasPermissionTo(PermissionType::KelolaSampling->value);
     }
 
     public function update(User $user, Sampling $sampling): bool
     {
-        return in_array($user->role, [UserRole::Admin, UserRole::Inspector, UserRole::TeamLeader], true);
+        return $user->hasPermissionTo(PermissionType::KelolaSampling->value);
     }
 
     public function delete(User $user, Sampling $sampling): bool
     {
-        return in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
+        return $user->hasPermissionTo(PermissionType::KelolaSampling->value)
+            && in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
     }
 
     public function restore(User $user, Sampling $sampling): bool
     {
-        return in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
+        return $user->hasPermissionTo(PermissionType::KelolaSampling->value)
+            && in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
     }
 
     public function forceDelete(User $user, Sampling $sampling): bool
@@ -55,6 +50,7 @@ class SamplingPolicy
 
     public function publish(User $user, Sampling $sampling): bool
     {
-        return in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
+        return $user->hasPermissionTo(PermissionType::KelolaSampling->value)
+            && in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
     }
 }

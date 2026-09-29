@@ -35,6 +35,10 @@ Route::get('/pengujian/{id?}', InspectionDetail::class)->name('publik.detail-pen
 */
 
 Route::prefix('portal-usaha')->group(function () {
+    Route::get('/', function () {
+        return auth()->check() ? redirect()->route('portal.dashboard') : redirect()->route('portal.login');
+    });
+
     Route::get('/login', Login::class)->middleware('guest')->name('portal.login');
 
     Route::post('/logout', function () {
@@ -68,7 +72,7 @@ Route::prefix('export')->group(function () {
     Route::get('/publik/pdf', [ReportExportController::class, 'exportPublicPdf'])->name('export.public.pdf');
 
     // Authenticated Exports
-    Route::middleware('auth')->group(function () {
+    Route::middleware(['auth', 'permission:export_laporan'])->group(function () {
         // Executive Supervision Report (PDF & Excel)
         Route::get('/laporan/excel', [ReportExportController::class, 'exportExecutiveReportExcel'])->name('export.executive.excel');
         Route::get('/laporan/pdf', [ReportExportController::class, 'exportExecutiveReportPdf'])->name('export.executive.pdf');

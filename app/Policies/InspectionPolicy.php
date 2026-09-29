@@ -2,6 +2,7 @@
 
 namespace App\Policies;
 
+use App\Enums\PermissionType;
 use App\Enums\UserRole;
 use App\Models\Inspection;
 use App\Models\User;
@@ -10,13 +11,8 @@ class InspectionPolicy
 {
     public function viewAny(User $user): bool
     {
-        return in_array($user->role, [
-            UserRole::Admin,
-            UserRole::Inspector,
-            UserRole::TeamLeader,
-            UserRole::Head,
-            UserRole::Business,
-        ], true);
+        return $user->hasPermissionTo(PermissionType::KelolaInspeksi->value)
+            || $user->hasPermissionTo(PermissionType::LihatLaporan->value);
     }
 
     public function view(User $user, Inspection $inspection): bool
@@ -25,27 +21,30 @@ class InspectionPolicy
             return $user->facilities()->where('facilities.id', $inspection->facility_id)->exists();
         }
 
-        return true;
+        return $user->hasPermissionTo(PermissionType::KelolaInspeksi->value)
+            || $user->hasPermissionTo(PermissionType::LihatLaporan->value);
     }
 
     public function create(User $user): bool
     {
-        return in_array($user->role, [UserRole::Admin, UserRole::Inspector, UserRole::TeamLeader], true);
+        return $user->hasPermissionTo(PermissionType::KelolaInspeksi->value);
     }
 
     public function update(User $user, Inspection $inspection): bool
     {
-        return in_array($user->role, [UserRole::Admin, UserRole::Inspector, UserRole::TeamLeader], true);
+        return $user->hasPermissionTo(PermissionType::KelolaInspeksi->value);
     }
 
     public function delete(User $user, Inspection $inspection): bool
     {
-        return in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
+        return $user->hasPermissionTo(PermissionType::KelolaInspeksi->value)
+            && in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
     }
 
     public function restore(User $user, Inspection $inspection): bool
     {
-        return in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
+        return $user->hasPermissionTo(PermissionType::KelolaInspeksi->value)
+            && in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
     }
 
     public function forceDelete(User $user, Inspection $inspection): bool
@@ -55,6 +54,7 @@ class InspectionPolicy
 
     public function publish(User $user, Inspection $inspection): bool
     {
-        return in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
+        return $user->hasPermissionTo(PermissionType::KelolaInspeksi->value)
+            && in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
     }
 }

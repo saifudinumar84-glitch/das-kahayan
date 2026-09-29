@@ -2,6 +2,7 @@
 
 namespace App\Policies;
 
+use App\Enums\PermissionType;
 use App\Enums\UserRole;
 use App\Models\Facility;
 use App\Models\User;
@@ -10,13 +11,9 @@ class FacilityPolicy
 {
     public function viewAny(User $user): bool
     {
-        return in_array($user->role, [
-            UserRole::Admin,
-            UserRole::Inspector,
-            UserRole::TeamLeader,
-            UserRole::Head,
-            UserRole::Business,
-        ], true);
+        return $user->hasPermissionTo(PermissionType::KelolaSarana->value)
+            || $user->hasPermissionTo(PermissionType::LihatLaporan->value)
+            || $user->role === UserRole::Business;
     }
 
     public function view(User $user, Facility $facility): bool
@@ -25,17 +22,18 @@ class FacilityPolicy
             return $user->facilities()->where('facilities.id', $facility->id)->exists();
         }
 
-        return true;
+        return $user->hasPermissionTo(PermissionType::KelolaSarana->value)
+            || $user->hasPermissionTo(PermissionType::LihatLaporan->value);
     }
 
     public function create(User $user): bool
     {
-        return in_array($user->role, [UserRole::Admin, UserRole::Inspector, UserRole::TeamLeader], true);
+        return $user->hasPermissionTo(PermissionType::KelolaSarana->value);
     }
 
     public function update(User $user, Facility $facility): bool
     {
-        return in_array($user->role, [UserRole::Admin, UserRole::Inspector, UserRole::TeamLeader], true);
+        return $user->hasPermissionTo(PermissionType::KelolaSarana->value);
     }
 
     public function delete(User $user, Facility $facility): bool
