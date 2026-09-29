@@ -31,38 +31,38 @@ class RolePermissionSeeder extends Seeder
         // 2. Role: Petugas Layanan / Inspektur
         $inspectorRole = Role::firstOrCreate(['name' => 'inspector', 'guard_name' => 'web']);
         $inspectorRole->syncPermissions([
-            PermissionType::KelolaInspeksi->value,
-            PermissionType::KelolaSampling->value,
+            PermissionType::ManageInspections->value,
+            PermissionType::ManageSamplings->value,
             PermissionType::ReviewCapa->value,
-            PermissionType::LihatLaporan->value,
-            PermissionType::ExportLaporan->value,
+            PermissionType::ViewReports->value,
+            PermissionType::ExportReports->value,
         ]);
 
         // 3. Role: Ketua Tim
         $teamLeaderRole = Role::firstOrCreate(['name' => 'team_leader', 'guard_name' => 'web']);
         $teamLeaderRole->syncPermissions([
-            PermissionType::KelolaInspeksi->value,
-            PermissionType::KelolaSampling->value,
-            PermissionType::KelolaRencanaKerja->value,
+            PermissionType::ManageInspections->value,
+            PermissionType::ManageSamplings->value,
+            PermissionType::ManageSupervisionPlans->value,
             PermissionType::ReviewCapa->value,
-            PermissionType::VerifikasiCapa->value,
-            PermissionType::LihatLaporan->value,
-            PermissionType::ExportLaporan->value,
+            PermissionType::VerifyCapa->value,
+            PermissionType::ViewReports->value,
+            PermissionType::ExportReports->value,
         ]);
 
         // 4. Role: Kepala Balai (Pimpinan)
         $headRole = Role::firstOrCreate(['name' => 'head', 'guard_name' => 'web']);
         $headRole->syncPermissions([
-            PermissionType::SetujuiCapa->value,
-            PermissionType::LihatLaporan->value,
-            PermissionType::ExportLaporan->value,
+            PermissionType::ApproveCapa->value,
+            PermissionType::ViewReports->value,
+            PermissionType::ExportReports->value,
         ]);
 
         // 5. Role: Pelaku Usaha (Business)
         $businessRole = Role::firstOrCreate(['name' => 'business', 'guard_name' => 'web']);
         $businessRole->syncPermissions([
-            PermissionType::KirimCapa->value,
-            PermissionType::LihatLaporan->value,
+            PermissionType::SubmitCapa->value,
+            PermissionType::ViewReports->value,
         ]);
 
         // Sync Spatie role for all existing users

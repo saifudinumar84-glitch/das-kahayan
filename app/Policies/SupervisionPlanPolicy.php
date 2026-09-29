@@ -11,35 +11,35 @@ class SupervisionPlanPolicy
 {
     public function viewAny(User $user): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaRencanaKerja->value)
-            || $user->hasPermissionTo(PermissionType::LihatLaporan->value);
+        return $user->hasPermissionTo(PermissionType::ManageSupervisionPlans->value)
+            || $user->hasPermissionTo(PermissionType::ViewReports->value);
     }
 
     public function view(User $user, SupervisionPlan $supervisionPlan): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaRencanaKerja->value)
-            || $user->hasPermissionTo(PermissionType::LihatLaporan->value);
+        return $user->hasPermissionTo(PermissionType::ManageSupervisionPlans->value)
+            || $user->hasPermissionTo(PermissionType::ViewReports->value);
     }
 
     public function create(User $user): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaRencanaKerja->value);
+        return $user->hasPermissionTo(PermissionType::ManageSupervisionPlans->value);
     }
 
     public function update(User $user, SupervisionPlan $supervisionPlan): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaRencanaKerja->value);
+        return $user->hasPermissionTo(PermissionType::ManageSupervisionPlans->value);
     }
 
     public function delete(User $user, SupervisionPlan $supervisionPlan): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaRencanaKerja->value)
+        return $user->hasPermissionTo(PermissionType::ManageSupervisionPlans->value)
             && in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
     }
 
     public function restore(User $user, SupervisionPlan $supervisionPlan): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaRencanaKerja->value)
+        return $user->hasPermissionTo(PermissionType::ManageSupervisionPlans->value)
             && in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
     }
 

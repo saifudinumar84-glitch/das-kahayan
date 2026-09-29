@@ -247,7 +247,7 @@ class ReportExportController extends Controller
             abort(401);
         }
 
-        if (! $user->hasPermissionTo(PermissionType::ExportLaporan->value)) {
+        if (! $user->hasPermissionTo(PermissionType::ExportReports->value)) {
             abort(403, 'Akses terbatas untuk Petugas BBPOM dan Pimpinan.');
         }
     }

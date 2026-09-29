@@ -11,9 +11,9 @@ class CapaSubmissionPolicy
 {
     public function viewAny(User $user): bool
     {
-        return $user->hasPermissionTo(PermissionType::KirimCapa->value)
+        return $user->hasPermissionTo(PermissionType::SubmitCapa->value)
             || $user->hasPermissionTo(PermissionType::ReviewCapa->value)
-            || $user->hasPermissionTo(PermissionType::LihatLaporan->value);
+            || $user->hasPermissionTo(PermissionType::ViewReports->value);
     }
 
     public function view(User $user, CapaSubmission $capaSubmission): bool
@@ -29,7 +29,7 @@ class CapaSubmissionPolicy
 
     public function create(User $user): bool
     {
-        return $user->hasPermissionTo(PermissionType::KirimCapa->value);
+        return $user->hasPermissionTo(PermissionType::SubmitCapa->value);
     }
 
     public function update(User $user, CapaSubmission $capaSubmission): bool

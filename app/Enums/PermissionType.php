@@ -23,28 +23,28 @@ use App\Filament\Resources\Users\UserResource;
 enum PermissionType: string
 {
     // ── Modul Pengawasan ───────────────────────────────────────
-    case KelolaInspeksi = 'kelola_inspeksi';
-    case KelolaSampling = 'kelola_sampling';
-    case KelolaRencanaKerja = 'kelola_rencana_kerja';
+    case ManageInspections = 'kelola_inspeksi';
+    case ManageSamplings = 'kelola_sampling';
+    case ManageSupervisionPlans = 'kelola_rencana_kerja';
 
     // ── CAPA (Corrective and Preventive Action) ────────────────
-    case KirimCapa = 'kirim_capa';
+    case SubmitCapa = 'kirim_capa';
     case ReviewCapa = 'review_capa';
-    case VerifikasiCapa = 'verifikasi_capa';
-    case SetujuiCapa = 'setujui_capa';
+    case VerifyCapa = 'verifikasi_capa';
+    case ApproveCapa = 'setujui_capa';
 
     // ── Master Data ────────────────────────────────────────────
-    case KelolaSarana = 'kelola_sarana';
-    case KelolaPangan = 'kelola_pangan';
-    case KelolaPersyaratanInspeksi = 'kelola_persyaratan_inspeksi';
-    case KelolaParameterUji = 'kelola_parameter_uji';
+    case ManageFacilities = 'kelola_sarana';
+    case ManageFoodData = 'kelola_pangan';
+    case ManageInspectionRequirements = 'kelola_persyaratan_inspeksi';
+    case ManageTestParameters = 'kelola_parameter_uji';
 
     // ── Pengguna & Sistem ──────────────────────────────────────
-    case KelolaPengguna = 'kelola_pengguna';
+    case ManageUsers = 'kelola_pengguna';
 
     // ── Laporan & Export ───────────────────────────────────────
-    case LihatLaporan = 'lihat_laporan';
-    case ExportLaporan = 'export_laporan';
+    case ViewReports = 'lihat_laporan';
+    case ExportReports = 'export_laporan';
 
     /**
      * Label yang ditampilkan di UI (bahasa Indonesia).
@@ -52,20 +52,20 @@ enum PermissionType: string
     public function getLabel(): string
     {
         return match ($this) {
-            self::KelolaInspeksi => 'Kelola Inspeksi',
-            self::KelolaSampling => 'Kelola Sampling',
-            self::KelolaRencanaKerja => 'Kelola Rencana Kerja Pengawasan',
-            self::KirimCapa => 'Kirim CAPA',
+            self::ManageInspections => 'Kelola Inspeksi',
+            self::ManageSamplings => 'Kelola Sampling',
+            self::ManageSupervisionPlans => 'Kelola Rencana Kerja Pengawasan',
+            self::SubmitCapa => 'Kirim CAPA',
             self::ReviewCapa => 'Review CAPA',
-            self::VerifikasiCapa => 'Verifikasi CAPA',
-            self::SetujuiCapa => 'Setujui CAPA',
-            self::KelolaSarana => 'Kelola Sarana',
-            self::KelolaPangan => 'Kelola Data Pangan',
-            self::KelolaPersyaratanInspeksi => 'Kelola Persyaratan Inspeksi',
-            self::KelolaParameterUji => 'Kelola Parameter Uji',
-            self::KelolaPengguna => 'Kelola Pengguna',
-            self::LihatLaporan => 'Lihat Laporan',
-            self::ExportLaporan => 'Export Laporan',
+            self::VerifyCapa => 'Verifikasi CAPA',
+            self::ApproveCapa => 'Setujui CAPA',
+            self::ManageFacilities => 'Kelola Sarana',
+            self::ManageFoodData => 'Kelola Data Pangan',
+            self::ManageInspectionRequirements => 'Kelola Persyaratan Inspeksi',
+            self::ManageTestParameters => 'Kelola Parameter Uji',
+            self::ManageUsers => 'Kelola Pengguna',
+            self::ViewReports => 'Lihat Laporan',
+            self::ExportReports => 'Export Laporan',
         };
     }
 
@@ -87,16 +87,16 @@ enum PermissionType: string
     public static function resourcePermissionMap(): array
     {
         return [
-            InspectionResource::class => self::KelolaInspeksi,
-            SamplingResource::class => self::KelolaSampling,
-            SupervisionPlanResource::class => self::KelolaRencanaKerja,
-            CapaClosureResource::class => self::VerifikasiCapa,
-            FacilityResource::class => self::KelolaSarana,
-            FoodCategoryResource::class => self::KelolaPangan,
-            FoodTypeResource::class => self::KelolaPangan,
-            InspectionRequirementResource::class => self::KelolaPersyaratanInspeksi,
-            TestParameterResource::class => self::KelolaParameterUji,
-            UserResource::class => self::KelolaPengguna,
+            InspectionResource::class => self::ManageInspections,
+            SamplingResource::class => self::ManageSamplings,
+            SupervisionPlanResource::class => self::ManageSupervisionPlans,
+            CapaClosureResource::class => self::VerifyCapa,
+            FacilityResource::class => self::ManageFacilities,
+            FoodCategoryResource::class => self::ManageFoodData,
+            FoodTypeResource::class => self::ManageFoodData,
+            InspectionRequirementResource::class => self::ManageInspectionRequirements,
+            TestParameterResource::class => self::ManageTestParameters,
+            UserResource::class => self::ManageUsers,
         ];
     }
 }

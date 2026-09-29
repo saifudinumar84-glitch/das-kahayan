@@ -11,10 +11,10 @@ class CapaClosurePolicy
 {
     public function viewAny(User $user): bool
     {
-        return $user->hasPermissionTo(PermissionType::VerifikasiCapa->value)
-            || $user->hasPermissionTo(PermissionType::SetujuiCapa->value)
+        return $user->hasPermissionTo(PermissionType::VerifyCapa->value)
+            || $user->hasPermissionTo(PermissionType::ApproveCapa->value)
             || $user->hasPermissionTo(PermissionType::ReviewCapa->value)
-            || $user->hasPermissionTo(PermissionType::LihatLaporan->value);
+            || $user->hasPermissionTo(PermissionType::ViewReports->value);
     }
 
     public function view(User $user, CapaClosure $capaClosure): bool
@@ -30,13 +30,13 @@ class CapaClosurePolicy
 
     public function create(User $user): bool
     {
-        return $user->hasPermissionTo(PermissionType::VerifikasiCapa->value);
+        return $user->hasPermissionTo(PermissionType::VerifyCapa->value);
     }
 
     public function update(User $user, CapaClosure $capaClosure): bool
     {
-        return $user->hasPermissionTo(PermissionType::VerifikasiCapa->value)
-            || $user->hasPermissionTo(PermissionType::SetujuiCapa->value);
+        return $user->hasPermissionTo(PermissionType::VerifyCapa->value)
+            || $user->hasPermissionTo(PermissionType::ApproveCapa->value);
     }
 
     public function delete(User $user, CapaClosure $capaClosure): bool

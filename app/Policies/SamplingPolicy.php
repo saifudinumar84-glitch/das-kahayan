@@ -11,35 +11,35 @@ class SamplingPolicy
 {
     public function viewAny(User $user): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaSampling->value)
-            || $user->hasPermissionTo(PermissionType::LihatLaporan->value);
+        return $user->hasPermissionTo(PermissionType::ManageSamplings->value)
+            || $user->hasPermissionTo(PermissionType::ViewReports->value);
     }
 
     public function view(User $user, Sampling $sampling): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaSampling->value)
-            || $user->hasPermissionTo(PermissionType::LihatLaporan->value);
+        return $user->hasPermissionTo(PermissionType::ManageSamplings->value)
+            || $user->hasPermissionTo(PermissionType::ViewReports->value);
     }
 
     public function create(User $user): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaSampling->value);
+        return $user->hasPermissionTo(PermissionType::ManageSamplings->value);
     }
 
     public function update(User $user, Sampling $sampling): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaSampling->value);
+        return $user->hasPermissionTo(PermissionType::ManageSamplings->value);
     }
 
     public function delete(User $user, Sampling $sampling): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaSampling->value)
+        return $user->hasPermissionTo(PermissionType::ManageSamplings->value)
             && in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
     }
 
     public function restore(User $user, Sampling $sampling): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaSampling->value)
+        return $user->hasPermissionTo(PermissionType::ManageSamplings->value)
             && in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
     }
 
@@ -50,7 +50,7 @@ class SamplingPolicy
 
     public function publish(User $user, Sampling $sampling): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaSampling->value)
+        return $user->hasPermissionTo(PermissionType::ManageSamplings->value)
             && in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
     }
 }

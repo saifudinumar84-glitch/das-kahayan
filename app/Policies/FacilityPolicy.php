@@ -11,8 +11,8 @@ class FacilityPolicy
 {
     public function viewAny(User $user): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaSarana->value)
-            || $user->hasPermissionTo(PermissionType::LihatLaporan->value)
+        return $user->hasPermissionTo(PermissionType::ManageFacilities->value)
+            || $user->hasPermissionTo(PermissionType::ViewReports->value)
             || $user->role === UserRole::Business;
     }
 
@@ -22,18 +22,18 @@ class FacilityPolicy
             return $user->facilities()->where('facilities.id', $facility->id)->exists();
         }
 
-        return $user->hasPermissionTo(PermissionType::KelolaSarana->value)
-            || $user->hasPermissionTo(PermissionType::LihatLaporan->value);
+        return $user->hasPermissionTo(PermissionType::ManageFacilities->value)
+            || $user->hasPermissionTo(PermissionType::ViewReports->value);
     }
 
     public function create(User $user): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaSarana->value);
+        return $user->hasPermissionTo(PermissionType::ManageFacilities->value);
     }
 
     public function update(User $user, Facility $facility): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaSarana->value);
+        return $user->hasPermissionTo(PermissionType::ManageFacilities->value);
     }
 
     public function delete(User $user, Facility $facility): bool

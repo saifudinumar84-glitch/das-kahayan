@@ -11,8 +11,8 @@ class InspectionFindingPolicy
 {
     public function viewAny(User $user): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaInspeksi->value)
-            || $user->hasPermissionTo(PermissionType::LihatLaporan->value)
+        return $user->hasPermissionTo(PermissionType::ManageInspections->value)
+            || $user->hasPermissionTo(PermissionType::ViewReports->value)
             || $user->role === UserRole::Business;
     }
 
@@ -24,29 +24,29 @@ class InspectionFindingPolicy
             return $facilityId && $user->facilities()->where('facilities.id', $facilityId)->exists();
         }
 
-        return $user->hasPermissionTo(PermissionType::KelolaInspeksi->value)
-            || $user->hasPermissionTo(PermissionType::LihatLaporan->value);
+        return $user->hasPermissionTo(PermissionType::ManageInspections->value)
+            || $user->hasPermissionTo(PermissionType::ViewReports->value);
     }
 
     public function create(User $user): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaInspeksi->value);
+        return $user->hasPermissionTo(PermissionType::ManageInspections->value);
     }
 
     public function update(User $user, InspectionFinding $inspectionFinding): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaInspeksi->value);
+        return $user->hasPermissionTo(PermissionType::ManageInspections->value);
     }
 
     public function delete(User $user, InspectionFinding $inspectionFinding): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaInspeksi->value)
+        return $user->hasPermissionTo(PermissionType::ManageInspections->value)
             && in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
     }
 
     public function restore(User $user, InspectionFinding $inspectionFinding): bool
     {
-        return $user->hasPermissionTo(PermissionType::KelolaInspeksi->value)
+        return $user->hasPermissionTo(PermissionType::ManageInspections->value)
             && in_array($user->role, [UserRole::Admin, UserRole::TeamLeader], true);
     }
 
